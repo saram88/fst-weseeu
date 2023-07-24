@@ -61,20 +61,29 @@ body {
 }
 
 .container-about {
-    background-color: rgba(0, 0, 0, 0.5);
-
-.container-contact {
-    
+    background-color:rgba(0, 0, 0, 0.5);
 }
+
 
 .content-container {
     padding-top: 75px;
     padding-bottom: 75px;
+    background-color: #dee2e6;
+}
+
+.container-wrapper {
+    padding-top: 40px; 
+    padding-bottom: 60px;
 }
 
 .card {
-    background-color: rgb(163, 167, 165);
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+.card-img-top {
+    height: 100;
+    width: 100;
+}
 
 /* Jumbotron */
 
@@ -105,6 +114,10 @@ body {
     color: #d0d0d0;
 }
 
+/* Button about us */
+.btn btn-secondary {
+    
+}
 
 
 /* Mark */
