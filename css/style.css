@@ -74,6 +74,7 @@ body {
 .container-wrapper {
     padding-top: 40px; 
     padding-bottom: 60px;
+    background-color: rgb(202, 202, 204);
 }
 
 .card {
