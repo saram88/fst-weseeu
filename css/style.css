@@ -36,7 +36,7 @@ body {
 
 .callout-container {
     height: 100vh;
-    background: url('../Images/bk-image.jpg') no-repeat bottom right fixed;
+    background: url('../Images/bg-image.jpg') no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -56,6 +56,10 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.container-service {
+    background-color: aquamarine;
+}
+
 .container-about {
 
 }
@@ -71,4 +75,41 @@ body {
 
 .card {
     background-color: aquamarine;
+}
+
+
+
+
+/* Jumbotron */
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron h1 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.jumbotron .lead {
+    color: #a7a7a7;
+    margin: 25px 0;
+}
+
+.jumbotron small {
+    font-size: 60%;
+    font-style: italic;
+    color: #d0d0d0;
+}
+
+
+
+/* Mark */
+
+mark 
+{
+    background-color: #c5f1cf;
+    border-radius: 5px;
 }
