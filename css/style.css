@@ -61,11 +61,10 @@ body {
 }
 
 .container-about {
-    background-color: blanchedalmond;
-}
+    background-color: rgba(0, 0, 0, 0.5);
 
-.contaibner-contact {
-
+.container-contact {
+    
 }
 
 .content-container {
@@ -75,7 +74,6 @@ body {
 
 .card {
     background-color: rgb(163, 167, 165);
-}
 
 
 /* Jumbotron */
