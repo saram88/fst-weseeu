@@ -31,3 +31,44 @@ body {
 .navbar .navbar-nav a {
     font-weight: bold;
 }
+
+/*container */
+
+.callout-container {
+    height: 100vh;
+    background: url('../images/whiskey-background.jpg') no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-services {
+
+}
+
+.container-about {
+
+}
+
+.contaibner-contact {
+
+}
+
+.content-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.hero-image-home {
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    position: relative;S
+    z-index: 0;
+}
