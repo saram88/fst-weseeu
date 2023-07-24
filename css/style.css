@@ -36,7 +36,7 @@ body {
 
 .callout-container {
     height: 100vh;
-    background: url('../images/whiskey-background.jpg') no-repeat bottom right fixed;
+    background: url('../Images/bk-image.jpg') no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -47,8 +47,13 @@ body {
     position: relative;
 }
 
-.container-services {
-
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .container-about {
@@ -64,11 +69,6 @@ body {
     padding-bottom: 75px;
 }
 
-.hero-image-home {
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    position: relative;S
-    z-index: 0;
+.card {
+    background-color: aquamarine;
 }
