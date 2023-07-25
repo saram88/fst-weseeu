@@ -61,14 +61,13 @@ body {
 }
 
 .container-about {
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color: white;
 }
 
 
 .content-container {
     padding-top: 75px;
     padding-bottom: 75px;
-    background-color: #dee2e6;
 }
 
 .container-wrapper {
@@ -119,6 +118,7 @@ body {
 .btn btn-secondary {
     
 }
+
 
 
 /* Mark */
