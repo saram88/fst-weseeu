@@ -37,3 +37,17 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+
+
+
+
+
+//*--*//
+
+USER SIDE
+- Boka
+- Sign in/sign up
+- 
+-Inloggad samtidigt som man kan förflytta sig till huvudmenyn och vice versa. 
+
+

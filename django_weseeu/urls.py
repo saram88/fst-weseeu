@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from weseeu.views import main_view
+from weseeu import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main_view, name='main'),
+    path('', views.main_view, name='main'),
+    path('booking/', views.bookings_view, name='booking'),
+    path('booking/add/', views.add_booking, name='add_booking'),
+    path('booking/edit/', views.edit_booking, name='edit_booking'),
+    path('booking/profile/', views.edit_profile, name='profile'),
     path('accounts/', include('allauth.urls')),
 ]

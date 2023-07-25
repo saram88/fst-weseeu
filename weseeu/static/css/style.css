@@ -61,7 +61,15 @@ body {
 }
 
 .container-about {
-    background-color: white;
+    background: url('./../images/startup-g7c44dca4e_1280.jpg') no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 
@@ -114,11 +122,6 @@ body {
     color: #d0d0d0;
 }
 
-/* Button about us */
-.btn btn-secondary {
-    
-}
-
 
 /* Mark */
 
@@ -126,4 +129,18 @@ mark
 {
     background-color: #dee2e6;
     border-radius: 5px;
+}
+
+/*background - about*/
+.background-images {
+    height: 100vh;
+    background: url('/weseeu/static/images/startup-g7c44dca4e_1280.jpg') no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
