@@ -41,6 +41,10 @@ def add_booking(request):
             return render(request, 'weseeu/add_booking.html', context)
     else:
         form = BookingForm()
+
+        field = form.fields['confirmed']
+        field.widget = field.hidden_widget()
+
         context = {
             'form': form
         }

@@ -46,7 +46,8 @@ class Booking(models.Model):
     startdate = models.DateTimeField(blank=False)
     enddate = models.DateTimeField(blank=False)
     confirmed = models.DateTimeField(blank=True, null=True)
-    
+    description = models.TextField(max_length=200, blank=True, null=True)
+
     """ def _get_total_time(self):
         "Returns the person's full name."
         return '%s, %s %s' % (self.lastname, self.firstname, self.middlename)

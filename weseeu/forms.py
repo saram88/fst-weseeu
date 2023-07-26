@@ -11,30 +11,33 @@ class BookingForm(forms.ModelForm):
 
         self.fields['startdate'].widget = forms.widgets.DateTimeInput(
             attrs = {
-                'type': 'datetime', 'placeholder': 'yyyy-mm-dd HH:MM (DOB)',
-                'class': 'form-control'
+                'type': 'datetime', 'placeholder': 'yyyy-mm-dd hh:mm',
+                'class': 'form-control datetimefield'
                 }
             )
         self.fields['enddate'].widget = forms.widgets.DateTimeInput(
             attrs = {
-                'type': 'date', 'placeholder': 'yyyy-mm-dd HH:MM (DOB)',
-                'class': 'form-control'
+                'type': 'datetime', 'placeholder': 'yyyy-mm-dd hh:mm',
+                'class': 'form-control datetimefield'
                 }
             )
         self.fields['confirmed'].widget = forms.widgets.DateTimeInput(
             attrs = {
-                'type': 'date', 'placeholder': 'yyyy-mm-dd HH:MM (DOB)',
-                'class': 'form-control'
+                'type': 'datetime', 'placeholder': 'yyyy-mm-dd hh:mm',
+                'class': 'form-control datetimefield'
                 }
             )
+
+
     class Meta:
         model = Booking
-        fields = ['service', 'startdate', 'enddate', 'confirmed']
+        fields = ['service', 'startdate', 'enddate', 'confirmed', 'description']
 
         labels = {
             "startdate": "Start date",
             "enddate": "End date",
-            "confirmed": "Confirmed date"
+            "confirmed": "Confirmed date",
+            "description": "Add description"
         }
 
         widgets = {
