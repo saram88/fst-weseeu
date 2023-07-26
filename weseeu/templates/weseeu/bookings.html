@@ -16,12 +16,13 @@
     <div class="container-fluid navalert-container">
         
         <nav class="navbar navbar-dark navbar-expand-sm">
-            <a href="/" class="navbar-brand">Weseeu</a>
+            <a href="/" class="navbar-brand"></a>
 
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span></button>
 
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <img src="{% static 'images/2.png' %}" alt="logo">
                 <ul class="navbar-nav mr-auto">
                     <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item mr-2"><a class="nav-link" href="/booking">Bookings</a></li>
@@ -81,11 +82,12 @@
                         </table>
                     </div>
                 </div>
-                <a href="/booking/add" class="btn btn-info">Add Booking</a>
+                <a href="/booking/add" class="btn btn-secondary">Add Booking</a>
             </section>
             <!-- /.Services -->
         </div>
     </div>
+
 
     <!-- Contact -->
     <div id="contact" class="container-wrapper">
@@ -93,14 +95,33 @@
             <section class="contact">
                 <div class="row">
                     <div class="col-12 page-header">
-                        <h2 class="text-uppercase">Contact us:</h2>
+                        <h2 class="text-uppercase">We are here for you if there are any problems. <br>
+                        Feel free to contact us if there is be any problem:</h2>
+                        <div class="row">
+                            <div class="col">
+                                <form id="form" name="form" method="get" action=" ">
+                                    <label for="name" class="form-label"><br>Name:</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required/>
+                                    <label for="epost" class="form-label"><br>E-mail:</label>
+                                    <input type="text" class="form-control" name="epost" id="epost" placeholder="Enter e-mail" required/>
+                                    <label for="message" class="form-label"><br>Message:</label>
+                                    <textarea class="form-control" name="message" id="message" cols="45" rows="5" ></textarea>
+                                    <input type="submit" class="btn btn-info" name="send" id="send" value="Send" />
+                                </form>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="about">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <hr class="block-divider block-divider--short block-divider--white">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="about">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                     </div>
                 </div>
@@ -108,5 +129,14 @@
             <!-- /.Contact -->
         </div>
     </div>
+    <footer>
+        <div class="text-center p-1" style="background-color: #D2D1D1;">
+           <p class="text-black"> © 2023 Sara Mentzer. Only for educational purpose.</p>
+           <a href="https://www.facebook.com/"><i class="fab fa-facebook-square ms-3"></i></a>
+           <a href="https://www.twitter.com/"><i class="fab fa-twitter-square ms-3"></i></a>
+           <a href="https://www.instagram.com/"><i class="fab fa-instagram-square ms-3"></i></a>
+           <a href="https://www.youtube.com/"><i class="fab fa-youtube-square ms-3"></i></a>
+    <!-- Copyright -->
+    </footer>
 </body>
 </html>

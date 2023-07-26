@@ -14,6 +14,6 @@ class BookingForm(forms.ModelForm):
         fields = ['service', 'startdate', 'enddate']
 
         widgets = {
-            'start_date' : DateTimePickerInput(),
-            'end_date' : DateTimePickerInput(),
+            'startdate' : DateTimePickerInput(),
+            'enddate' : DateTimePickerInput(),
         }
