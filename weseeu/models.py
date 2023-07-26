@@ -46,6 +46,16 @@ class Booking(models.Model):
     startdate = models.DateTimeField(blank=False)
     enddate = models.DateTimeField(blank=False)
 
+    """ 
+    confirmeddate = models.DateTimeField(blank=True)
+    
+    def _get_total_time(self):
+        "Returns the person's full name."
+        return '%s, %s %s' % (self.lastname, self.firstname, self.middlename)
+    totaltime = property(_get_full_name)
+
+    """
+
     class Meta:
         ordering = ["startdate"]
 

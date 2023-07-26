@@ -37,7 +37,7 @@
                             {{ error }}
                             <p>
                                 <button class="btn btn-info" type="submit">Save booking</button>
-                                <a class="btn btn-danger" href="/booking/delete/{{ form.booking_id }}">Delete booking</a>
+                                <a class="btn btn-danger" href="/booking/delete/{{ form.instance.pk }}">Delete booking</a>
                                 <a class="btn btn-info" href="/booking/">Cancel</a>
                             </p>
                         </div>

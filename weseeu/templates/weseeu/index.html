@@ -22,7 +22,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <img src="{% static 'images/2.png' %}" alt="logo" height="150" width="150">
+                <img src="{% static 'images/2.png' %}" alt="logo">
                 <ul class="navbar-nav mr-auto">
                     <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item mr-2"><a class="nav-link" href="#services">Services</a></li>
@@ -70,70 +70,69 @@
         <!-- /.callout -->
     </div>
 
-    <!-- Services -->
-    <div id="services" class="container-wrapper container-service">
-        <div class="container content-container">
-            <div class="row">
-                <div class="col-12 page-header">
-                    <h2 class="text-uppercase">Our services</h2>
-                    <hr class="block-divider block-divider--short block-divider--white">
-                </div>
-            </div>
 
-            <!--Service 1-->
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'images/communications.jpg' %}" class="card-img-top" alt="picture1">
-                        <div class="card-body">
-                            <h5 class="card-title">Communications and sale</h5>
+        <!--/.Feature-services-->
+
+    <div class="container-wrapper container-wrapper--red">
+        <div class="container features-container content-container">
+            <section class="features">
+                <div class="row">
+                    <div class="col-12 page-header">
+                        <h2 class="text-uppercase">What we can do for you:</h2>
+                        <hr class="block-divider block-divider--short block-divider--white">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img src="{% static 'images/Eko-admin.jpg' %}" class="card-img-top" alt="picture1">
+                        <br>
+                        <div class="feature">
+                            <br>
+                            <h3><i class="fas fa-gift d-none d-sm-block"></i> Economy & admin <span class="badge badge-success">NEW!</span></h3>
+                            <ul>
+                                <li>We can support you whit that economy you dont want to handle. We offer support on many different things when it comes to economy. And for you administrations that just take time from your things you really wanna do, we suppiort that to!</li>
+                                <li>We can easily familiarize ourselves with your financial flow. And we always treat your information confidentially</li>
+                                <hr>
+                                <p><a class="btn btn-sm btn-dark" href="">Read More</a></p>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <img src="{% static 'images/marketing.jpg' %}" class="card-img-top" alt="picture1">
+                        <br>
+                        <div class="feature">
+                            <br>
+                            <h3><i class="fas fa-credit-card d-none d-sm-block"></i> Marketing </h3>
                             <ul>
                                 <li>We can provide you with communications to costumer, write on social media and coash and support you whit all sale info you need to do.</li>
                                 <li>Write on social media </li>
                                 <li>coash and support you whit all sale info you need to do.</li>
+                                <li>Scale up your company by SEO and marketing solutions</li>
+                                <li>Be the one that work whit your support questions</li>
                             </ul>
-                        </div>
-                        
-                        <div class="card-footer">
+                            <hr>
+                            <p><a class="btn btn-sm btn-dark" href="">Read More</a></p>
                         </div>
                     </div>
-                </div>
-            <!-- /service 1 -->
-
-            <!--Service 2-->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'images/Ekonomy-services.jpg' %}" class="card-img-top" alt="picture2">
-                        <div class="card-body">
-                            <h5 class="card-title">Economy and admin</h5>
-                            <ul>
-                                <li>We can support you whit that economy you dont want to handle. We offer support on many different things when it comes to economy. And for you administrations that just take time from your things you really wanna do, we suppiort that to!</li>
-                                <li>We can easily familiarize ourselves with your financial flow. And we always treat your information confidentially</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                        </div>
-                    </div>
-                </div>
-            <!-- /service 2 -->
-
-            <!--service 3 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="{% static 'images/IT-sulotion.jpg' %}" class="card-img-top" alt="picture3">
-                        <div class="card-body">
-                            <h5 class="card-title">IT Solutions</h5>
+                    <div class="col-12 d-md-none d-lg-block col-lg-4">
+                        <img src="{% static 'images/IT-sulotion.jpg' %}" class="card-img-top" alt="picture1">
+                        <br>
+                        <div class="feature">
+                            <br>
+                            <h3><i class="fas fa-times-circle d-none d-sm-block"></i> IT soultions</h3>
                             <ul>
                                 <li>company now need to update their IT sulotions to reach out to their costumers, but many company dosent know how to do it. We provide you whit the higest expertice in this things! We can computers</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="card-footer">
+                                <li>If you need someone to administratet your </li>
+                                <li>Fullstack devolopemnt and teaching out to your emplyeds</li>
+                                <li>Set up new dataenvoirements</li>
+                            </ul>  
+                            <hr>                          
+                            <p><a class="btn btn-sm btn-dark" href="">Read More</a></p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- /service 3-->
+            </section>
+            <!-- /.features -->
         </div>
     </div>
 
@@ -165,7 +164,7 @@
         </div>
     </div>
     <!-- /.About -->
-        
+
     <!-- Contact -->
     <div id="contact" class="container-wrapper">
         <div class="container container-contact content-container">
@@ -211,16 +210,15 @@
     </div>
     <!-- /.Contact -->
 
-        <!-- Grid container -->
-        <!-- Copyright -->
+    <!-- Copyright -->
     <footer>
-        <div class="text-center p-1" style="background-color: #90928a;">
+        <div class="text-center p-1" style="background-color: #D2D1D1;">
            <p class="text-black"> © 2023 Sara Mentzer. Only for educational purpose.</p>
            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square ms-3"></i></a>
            <a href="https://www.twitter.com/"><i class="fab fa-twitter-square ms-3"></i></a>
            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square ms-3"></i></a>
            <a href="https://www.youtube.com/"><i class="fab fa-youtube-square ms-3"></i></a>
-        <!-- Copyright -->
+    <!-- Copyright -->
     </footer>
 
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

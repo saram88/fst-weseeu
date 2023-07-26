@@ -1,3 +1,4 @@
+from .widgets import  DateTimePickerInput
 from django import forms
 from .models import Booking
 
@@ -11,3 +12,8 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['service', 'startdate', 'enddate']
+
+        widgets = {
+            'start_date' : DateTimePickerInput(),
+            'end_date' : DateTimePickerInput(),
+        }

@@ -57,7 +57,7 @@ body {
 }
 
 .container-service {
-    background-color: #dee2e6;
+    background-color: #D2D1D1
 }
 
 .container-about {
@@ -72,16 +72,17 @@ body {
     position: relative;
 }
 
-
 .content-container {
+
     padding-top: 75px;
     padding-bottom: 75px;
+
 }
 
 .container-wrapper {
     padding-top: 40px; 
     padding-bottom: 60px;
-    background-color: rgb(202, 202, 204);
+    background-color: #8D8885
 }
 
 .card {
@@ -92,6 +93,7 @@ body {
     height: 100;
     width: 100;
 }
+
 
 /* Jumbotron */
 
@@ -119,7 +121,7 @@ body {
 .jumbotron small {
     font-size: 80%;
     font-style: italic;
-    color: #d0d0d0;
+    color: #D2D1D1
 }
 
 
@@ -127,7 +129,7 @@ body {
 
 mark 
 {
-    background-color: #dee2e6;
+    background-color: #D2D1D1
     border-radius: 5px;
 }
 
