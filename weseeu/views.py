@@ -41,7 +41,7 @@ def add_booking(request):
             return render(request, 'weseeu/add_booking.html', context)
     else:
         form = BookingForm()
-
+        # Hide confirmed when add booking
         field = form.fields['confirmed']
         field.widget = field.hidden_widget()
 
@@ -51,7 +51,6 @@ def add_booking(request):
         return render(request, 'weseeu/add_booking.html', context)
         
 
-
 def edit_booking(request, booking_id):
     item = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':
@@ -59,7 +58,12 @@ def edit_booking(request, booking_id):
         if form.is_valid():
             form.save()
             return redirect('booking')
+    
     form = BookingForm(instance=item)
+    # Show only confirmed when user is 'staff'
+    if (not request.user.is_staff):
+        field = form.fields['confirmed']
+        field.widget = field.hidden_widget()
     context = {
         'form': form
     }
