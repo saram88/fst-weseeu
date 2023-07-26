@@ -79,11 +79,20 @@ body {
 
 }
 
+.container-box {
+
+background-color: #ffffff8c;
+padding: 5px;
+border-radius: 5px;
+}
+
 .container-wrapper {
     padding-top: 40px; 
     padding-bottom: 60px;
     background-color: #8D8885
 }
+
+
 
 .card {
     background-color: rgba(0, 0, 0, 0.5);
@@ -124,7 +133,6 @@ body {
     color: #D2D1D1
 }
 
-
 /* Mark */
 
 mark 
@@ -152,4 +160,19 @@ mark
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+
+/* Footer */
+.footer-container
+{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;;
+}
+
+.footer-container .text-center.p-1 a 
+{
+    color: black;
 }

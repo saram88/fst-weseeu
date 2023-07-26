@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -51,6 +52,7 @@
             <section class="services">
                 <div class="row">
                     <div class="col-12 page-header">
+                        <br>
                         <h2 class="text-uppercase">My bookings: </h2>
                     </div>
                 </div>
@@ -63,6 +65,7 @@
                                     <th scope="col">Service</th>
                                     <th scope="col">Start</th>
                                     <th scope="col">End</th>
+                                    <th scope="col">Confirmed</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -72,6 +75,7 @@
                                     <td><a href="/booking/edit/{{ booking.id }}">{{ booking.service.name }}</a> </td>
                                     <td>{{ booking.startdate|date:'Y-m-d H:M' }}</td>
                                     <td>{{ booking.enddate|date:'Y-m-d H:M' }}</td>
+                                    <td>{{booking.confirmed|date:'Y-m-d H:M'|default:"Not confimerd"}}</td>
                                 </tr>
                                 {% empty %}
                                 <tr>
@@ -84,10 +88,9 @@
                 </div>
                 <a href="/booking/add" class="btn btn-secondary">Add Booking</a>
             </section>
-            <!-- /.Services -->
+    <!-- /.Services -->
         </div>
     </div>
-
 
     <!-- Contact -->
     <div id="contact" class="container-wrapper">
@@ -95,8 +98,8 @@
             <section class="contact">
                 <div class="row">
                     <div class="col-12 page-header">
-                        <h2 class="text-uppercase">We are here for you if there are any problems. <br>
-                        Feel free to contact us if there is be any problem:</h2>
+                        <h4 class="text-uppercase">We are here for you if there are any problems. <br>
+                        Feel free to contact us if there is be any problem:</h4>
                         <div class="row">
                             <div class="col">
                                 <form id="form" name="form" method="get" action=" ">
@@ -126,10 +129,10 @@
                     </div>
                 </div>
             </section>
-            <!-- /.Contact -->
+    <!-- /.Contact -->
         </div>
     </div>
-    <footer>
+    <footer class="footer-container">
         <div class="text-center p-1" style="background-color: #D2D1D1;">
            <p class="text-black"> © 2023 Sara Mentzer. Only for educational purpose.</p>
            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square ms-3"></i></a>
