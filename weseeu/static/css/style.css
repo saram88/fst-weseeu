@@ -146,6 +146,7 @@ mark
 .box
 {
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(0,0,0,.05);
     border-radius: 5px;
 }
 
@@ -168,7 +169,14 @@ mark
 .datetimefield 
 {
     max-width: 170px;
+}
 
+/* */
+.errorlist {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #dc3545;
 }
 
 

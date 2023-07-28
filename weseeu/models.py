@@ -58,3 +58,18 @@ class Booking(models.Model):
 
     def __str__(self):
         return self.service.name
+
+    def get_booking_within_dates(service, start, end):
+        
+        #bookings = Booking.objects.raw('SELECT * FROM ' + Booking.objects.model._meta.db_table + ' WHERE service='+ servie) # + " AND startdate BETWEEN " + start + " AND " + enddate)
+        #queryset = Booking.objects.raw("SELECT * FROM " + Booking.objects.model._meta.db_table + " WHERE service="+ servie + " AND startdate BETWEEN " + start + " AND " + enddate)
+        #return True
+
+        #booking = Booking.objects.filter(startdate__date__range=(start, end), enddate__date__range=(start, end))
+        booking = Booking.objects.filter(service=service, startdate__range=(start, end))
+        
+
+        if (booking.count > 0):
+            return True
+        else:
+            return False

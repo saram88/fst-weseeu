@@ -39,7 +39,11 @@
                         {% csrf_token %}
                         {{ form.as_p }}
                         <div>
-                            {{ error }}
+                            {% if error|length > 0 %}
+                            <div class="alert alert-danger">
+                                {{ error }}
+                            </div>
+                            {% endif %}
                             <p>
                                 <button class="btn btn-info" type="submit">Add booking</button>
                                 <a class="btn btn-info" href="/booking/">Cancel</a>

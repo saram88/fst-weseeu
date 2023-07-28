@@ -78,6 +78,8 @@ TEMPLATES = [
     },
 ]
 
+os.environ["DJANGO_SETTINGS_MODULE"] = "django_weseeu.settings"
+
 WSGI_APPLICATION = 'django_weseeu.wsgi.application'
 
 
