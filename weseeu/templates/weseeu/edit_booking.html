@@ -37,7 +37,11 @@
                         {% csrf_token %}
                         {{ form.as_p }}
                         <div>
-                            {{ error }}
+                            {% if error|length > 0 %}
+                            <div class="alert alert-danger">
+                                {{ error }}
+                            </div>
+                            {% endif %}
                             <p>
                                 <button class="btn btn-info" type="submit">Save booking</button>
                                 <a class="btn btn-danger" href="/booking/delete/{{ form.instance.pk }}">Delete booking</a>
