@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">   
+        (function(){      
+            emailjs.init("l-2Vinb9Tmnd3_5Cz");
+            })();
+    </script>
 </head>
 
 <body>
@@ -102,14 +108,15 @@
                         Feel free to contact us if there is be any problem:</h4>
                         <div class="row">
                             <div class="col">
-                                <form id="form" name="form" method="get" action=" ">
-                                    <label for="name" class="form-label"><br>Name:</label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required/>
-                                    <label for="epost" class="form-label"><br>E-mail:</label>
-                                    <input type="text" class="form-control" name="epost" id="epost" placeholder="Enter e-mail" required/>
-                                    <label for="message" class="form-label"><br>Message:</label>
-                                    <textarea class="form-control" name="message" id="message" cols="100" rows="5" ></textarea>
-                                    <input type="submit" class="btn btn-info" name="send" id="send" value="Send" />
+                                <form id="form" name="form" onsubmit="return sendMail(this);">
+                                    <label for="contact_name" class="form-label">Name*:</label>
+                                    <input type="text" class="form-control" name="contact_name" id="contact_name" placeholder="Enter name" required/>
+                                    <label for="contact_mail" class="form-label">E-mail*:</label>
+                                    <input type="text" class="form-control" name="contact_mail" id="contact_mail" placeholder="Enter e-mail" required/>
+                                    <label for="contact_message" class="form-label">Message:</label>
+                                    <textarea class="form-control" name="contact_message" id="contact_message" cols="45" rows="5" ></textarea>
+                                    <br>
+                                    <input type="submit" class="btn btn-sm btn-dark" name="send" id="send" value="Send" />
                                 </form>
                                 <br>
                                 <div class="row">
@@ -141,5 +148,9 @@
            <a href="https://www.youtube.com/"><i class="fab fa-youtube-square ms-3"></i></a>
     <!-- Copyright -->
     </footer>
+    <script type="text/javascript" src="{% static 'JS/sendEmail.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
