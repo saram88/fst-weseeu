@@ -1,2 +1,4 @@
-console.log("hello")
-
+function sendMail(contactForm) {
+    emailjs.send("gmail", ")
+    "from_name"
+}

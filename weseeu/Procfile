@@ -1,1 +1,1 @@
-web: gunicorn django_weseeu.wsgi
+web: gunicorn django_weseeu.wsgi:application
