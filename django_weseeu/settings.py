@@ -34,7 +34,7 @@ DEBUG = development
 if development:
     ALLOWED_HOSTS = ['8000-saram88-fstweseeu-tog32dfxc5b.ws-eu102.gitpod.io']
 else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+    ALLOWED_HOSTS = ['https://weseeu-d11eb0a1e579.herokuapp.com/']
 
 
 # Application definition
