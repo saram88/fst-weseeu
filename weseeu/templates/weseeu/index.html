@@ -11,15 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!--Email form
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">   
         (function(){      
-            emailjs.init("l-2Vinb9Tmnd3_5Cz")
-            emailjs.send("service_vg0sszf", "template_4p3bsdl", {from_name: 'Sara', from_email: 'sara_mentzer@hotmail.com', message: 'Test mail....' });
+            emailjs.init("l-2Vinb9Tmnd3_5Cz");
             })();
     </script>
-    -->
 
 
 </head>
@@ -193,7 +190,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <form id="form" name="form" method="get" action=" ">
+                        <form id="form" name="form" onsubmit="return sendMail(this);">
                             <label for="name" class="form-label">Name*:</label>
                             <input type="text" class="form-control" name="contact-name" id="contact-name" placeholder="Enter name" required/>
                             <label for="epost" class="form-label">E-mail*:</label>
@@ -230,10 +227,12 @@
            <a href="https://www.youtube.com/"><i class="fab fa-youtube-square ms-3"></i></a>
     <!-- Copyright -->
     </footer>
-
+    <!-- Email>
+     <script src="static/JS/sendEmail.js."></script>
+     -->
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- 
+
 </body>
 </html>
