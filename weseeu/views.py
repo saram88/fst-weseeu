@@ -5,6 +5,7 @@ from .forms import BookingForm
 from datetime import datetime
 from django.utils.dateparse import parse_date
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def main_view(request):
     return render(request, 'index.html')
@@ -79,6 +80,7 @@ def add_booking(request):
 
                 form.instance.user_id = request.user.id
                 form.save()
+                messages.success(request, 'Booking added successfully')
                 return redirect('booking')
             else:
                 #form = BookingForm()
@@ -146,6 +148,7 @@ def edit_booking(request, booking_id):
 
 
             form.save()
+            messages.success(request, 'Your booking has been updated')
             return redirect('booking')
         else:
             context = {
@@ -167,9 +170,18 @@ def edit_booking(request, booking_id):
 
 @login_required
 def delete_booking(request, booking_id):
-    item = get_object_or_404(Booking, id=booking_id)
-    item.delete()
-    return redirect('booking')
+    booking = get_object_or_404(Booking, id=booking_id)
+    
+    if request.method == "POST":
+        booking.delete()
+        messages.success(request, "Your booking has been deleted")
+        return redirect('booking')
+
+    form = BookingForm(instance=booking)
+    context = {
+        'form': form
+    }
+    return render(request, 'delete_booking.html', context)
 
 
 @login_required
