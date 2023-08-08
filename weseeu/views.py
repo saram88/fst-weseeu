@@ -22,6 +22,17 @@ def contact_view(request):
     return render(request, 'contact.html')
 
 
+# Error handling
+def error_404(request, exception):
+        data = {}
+        return render(request,'404.html', status=404)
+        
+
+def error_500(request):
+        data = {}
+        return render(request,'500.html', data)
+
+
 @login_required
 def bookings_view(request):
     if (request.user.is_authenticated):

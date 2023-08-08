@@ -34,5 +34,8 @@ urlpatterns = [
     path('booking/edit/<booking_id>', views.edit_booking, name='edit_booking'),
     path('booking/delete/<booking_id>', views.delete_booking, name='delete_booking'),
     path('booking/profile/', views.edit_profile, name='profile'),
-    
 ]
+
+handler404 = 'weseeu.views.error_404'
+handler500 = 'weseeu.views.error_500'
+
