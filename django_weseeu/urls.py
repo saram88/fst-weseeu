@@ -18,12 +18,21 @@ from django.urls import path, include
 from weseeu import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+     # Open pages
     path('', views.main_view, name='main'),
+    path('about/', views.about_view, name='about'),
+    path('contact/', views.contact_view, name='contact'),
+    path('service/', views.service_view, name='service'),
+
+    # Admin and account
+    path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+
+    # Bookings
     path('booking/', views.bookings_view, name='booking'),
     path('booking/add/', views.add_booking, name='add_booking'),
     path('booking/edit/<booking_id>', views.edit_booking, name='edit_booking'),
     path('booking/delete/<booking_id>', views.delete_booking, name='delete_booking'),
     path('booking/profile/', views.edit_profile, name='profile'),
-    path('accounts/', include('allauth.urls')),
+    
 ]

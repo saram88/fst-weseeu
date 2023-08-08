@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WeeSeeU">
+    <meta name="description" content="WeSeeU">
     <meta name="author" content="Sara Mentzer">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -34,12 +34,12 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <img src="{% static 'images/2.png' %}" alt="logo">
                 <ul class="navbar-nav mr-auto">
-                    <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="{% if request.path == '/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+                    <li class="{% if request.path == '/service/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/service">Services</a></li>
+                    <li class="{% if request.path == '/about/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
+                    <li class="{% if request.path == '/contact/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/contact">Contact</a></li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item mr-2"><a class="nav-link" href="/booking">Booking</a></li>
+                    <li class="{% if request.path == '/booking/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/booking">Booking</a></li>
                     <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="{% url 'account_logout' %}">Sign out</a></li>
                     {% else %}
                     <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="{% url 'account_login' %}">Sign In / Sign Up</a></li>
@@ -55,7 +55,6 @@
             </div>
         </nav>
     </div>
-
     <div>
         {% block content %}
         {% endblock content %}

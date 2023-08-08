@@ -36,7 +36,7 @@ body {
 
 .callout-container {
     height: 100vh;
-    background: url('./../images/bg-image.jpg') no-repeat bottom right fixed;
+    background: url('/static/images/bg-image.jpg') no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -57,26 +57,21 @@ body {
 }
 
 .container-service {
-    background-color: #D2D1D1
+    background-color: #D2D1D1;
+    height: 100vh;
+}
+
+.container-contact {
+    height: 100vh;
 }
 
 .container-about {
-    background: url('./../images/startup-g7c44dca4e_1280.jpg') no-repeat top right;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    height: 100vh;
 }
 
 .content-container {
-
     padding-top: 75px;
     padding-bottom: 75px;
-
 }
 
 .container-box {
@@ -88,7 +83,6 @@ body {
 .container-wrapper {
     padding-top: 40px; 
     padding-bottom: 60px;
-    
 }
 
 .container-color {

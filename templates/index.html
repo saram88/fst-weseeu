@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}WeeSeeU | Home{% endblock %}
+{% block title %}WeSeeU | Home{% endblock %}
 {% block content %}
 
 
-    <div class="container-fluid callout-container" >
-        
+    <div class="container-fluid callout-container">
         <!-- Callout -->
         <div class="opaque-overlay">&nbsp;</div>
         <div class="row">
@@ -29,141 +28,4 @@
     </div>
 
 
-        <!--/.Feature-services-->
-
-    <div id="services" class="container-wrapper container-color">
-        <div class="container features-container content-container">
-            <section class="features">
-                <div class="row">
-                    <div class="col-12 page-header">
-                        <h2 class="text-uppercase">What we can do for you:</h2>
-                        <hr class="block-divider block-divider--short block-divider--white">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <img src="{% static 'images/Eko-admin1.jpg' %}" class="card-img-top" alt="picture1">
-                        <br>
-                        <div class="feature">
-                            <br>
-                            <h3>Economy & admin</h3>
-                            <ul>
-                                <li>We can support you whit that economy you dont want to handle. We offer support on many different things when it comes to economy. And for you administrations that just take time from your things you really wanna do, we suppiort that to!</li>
-                                <li>We can easily familiarize ourselves with your financial flow.</li>
-                                <li>We can easily familiarize ourselves with your financial flow.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <img src="{% static 'images/marketing1.jpg' %}" class="card-img-top" alt="picture1">
-                        <br>
-                        <div class="feature">
-                            <br>
-                            <h3>Marketing</h3>
-                            <ul>
-                                <li>We can provide you with communications to costumer, write on social media and coash and support you whit all sale info you need to do.</li>
-                                <li>Write on social media </li>
-                                <li>coash and support you whit all sale info you need to do.</li>
-                                <li>Scale up your company by SEO and marketing solutions</li>
-                                <li>Scale up your company by SEO</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <img src="{% static 'images/IT-sulotion.jpg' %}" class="card-img-top" alt="picture1">
-                        <br>
-                        <div class="feature">
-                            <br>
-                            <h3>Soultions</h3>
-                            <ul>
-                                <li>company now need to update their IT sulotions to reach out to their costumers, but many company dosent know how to do it. We provide you whit the higest expertice in this things! We can computers</li>
-                                <li>If you need someone to administratet your </li>
-                                <li>Fullstack devolopemnt and teaching out to your emplyeds</li>
-                                <li>Set up new dataenvoirements</li> 
-                                <li>Handle your support questions</li>
-                            </ul> 
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- /.features -->
-        </div>
-    </div>
-
-    <!-- About -->
-    <div id="about" class="container-wrapper">
-        <div class="container content-container">
-            <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                </div>
-            </div>
-            <div class="container-box">
-                <section class="about">
-                    <div class="row">
-                        <div class="col-12 page-header">
-                            <h2 class="text-uppercase">About us:</h2>
-                            <hr class="block-divider block-divider--short block-divider--white">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div class="about">
-                                <p>We are a company with a clear plan. We want to make it possible for other companies to focus on their main business, the core of their company! 
-                                What would you say if you got the offer to have more time for exactly what you want to do, at the same time you get to pay less than what you yourself cost per hour in your company or workplace? From what I read, it is actually a clear win and is a clear advantage. Connect you and your company today!</p>
-                                <p>We are a work team that all have their areas of expertise. We have extensive experience and knowledge, and together we form effective and sustainable solutions for you as a customer.</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <!-- /.About -->
-
-    <!-- Contact -->
-    <div id="contact" class="container-wrapper container-color">
-        <div class="container container-contact content-container">
-            <section class="contact">
-                <div class="row">
-                    <div class="col-12 page-header">
-                        <h3>
-                            We are always here for you<br>
-                            feel free to call us or just<br>
-                            send us a messenger here right now<br>
-                        </h3>   
-                        <h5>
-                            (We answer in 24 hours)
-                        </h5>
-                        <hr class="block-divider block-divider--short block-divider--white">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <form id="form" name="form" onsubmit="return sendMail(this);">
-                            <label for="contact_name" class="form-label">Name*:</label>
-                            <input type="text" class="form-control" name="contact_name" id="contact_name" placeholder="Enter name" required/>
-                            <label for="contact_mail" class="form-label">E-mail*:</label>
-                            <input type="text" class="form-control" name="contact_mail" id="contact_mail" placeholder="Enter e-mail" required/>
-                            <label for="contact_message" class="form-label">Message:</label>
-                            <textarea class="form-control" name="contact_message" id="contact_message" cols="45" rows="5" ></textarea>
-                            <br>
-                            <input type="submit" class="btn btn-sm btn-dark" name="send" id="send" value="Send" />
-                        </form>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <div class="about">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64158.442240760836!2d17.576047513809517!3d59.83333997266709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbfb8532ab8d%3A0xaa4fe90a85820807!2sUppsala!5e0!3m2!1ssv!2sse!4v1690273476458!5m2!1ssv!2sse" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <!-- /.Contact -->
     {% endblock %}

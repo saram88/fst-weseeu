@@ -1,0 +1,49 @@
+{% extends "account/base.html" %}
+{% block title %}WeSeeU | Sign up{% endblock %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+<!-- SIGN UP FORM START -->
+<div id="signup" class="container container-wrapper">
+    <div class="container content-container box">
+        <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+            </div>
+        </div>
+        <div>
+            <section class="signup">
+                <div class="row">
+                    <div class="col-12 page-header">
+                        <h2 class="text-uppercase">Log in</h2>
+                        <hr class="block-divider block-divider--short block-divider--white">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="signup">
+                            <p>
+                                {% blocktrans %}Already have an account? <a href="{{ login_url }}" class="text-dark"><u>Log in</u></a>{% endblocktrans %}
+                            </p>
+                            <form class="login" method="POST" action="{% url 'account_signup' %}">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                {% if redirect_field_value %}
+                                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                {% endif %}
+                              <button class="btn btn-info submit" type="submit">{% trans "Sign Up" %}</button>
+                              <a class="btn btn-outline-dark" href="/">Cancel</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+  </div>
+
+<!-- SIGN UP FORM END -->
+
+{% endblock %}

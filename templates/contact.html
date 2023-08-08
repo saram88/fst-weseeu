@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}WeSeeU | Home{% endblock %}
+{% block content %}
+
+
+    <!-- Contact -->
+    <div id="contact" class="container-wrapper container-contact container-color">
+        <div class="container content-container">
+            <section class="contact">
+                <div class="row">
+                    <div class="col-12 page-header">
+                        <h3>
+                            We are always here for you<br>
+                            feel free to call us or just<br>
+                            send us a messenger here right now<br>
+                        </h3>   
+                        <h5>
+                            (We answer in 24 hours)
+                        </h5>
+                        <hr class="block-divider block-divider--short block-divider--white">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form id="form" name="form" onsubmit="return sendMail(this);">
+                            <label for="contact_name" class="form-label">Name*:</label>
+                            <input type="text" class="form-control" name="contact_name" id="contact_name" placeholder="Enter name" required/>
+                            <label for="contact_mail" class="form-label">E-mail*:</label>
+                            <input type="text" class="form-control" name="contact_mail" id="contact_mail" placeholder="Enter e-mail" required/>
+                            <label for="contact_message" class="form-label">Message:</label>
+                            <textarea class="form-control" name="contact_message" id="contact_message" cols="45" rows="5" ></textarea>
+                            <br>
+                            <input type="submit" class="btn btn-sm btn-dark" name="send" id="send" value="Send" />
+                        </form>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <div class="about">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64158.442240760836!2d17.576047513809517!3d59.83333997266709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbfb8532ab8d%3A0xaa4fe90a85820807!2sUppsala!5e0!3m2!1ssv!2sse!4v1690273476458!5m2!1ssv!2sse" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- /.Contact -->
+    {% endblock %}
