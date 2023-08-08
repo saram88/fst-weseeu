@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block title %}The Wine Garden BnB | 404 Page Not Found{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- 404 ERROR MESSAGE (PAGE DOES NOT EXIST) -->
+<div class="container card card-body">
+    <div class="container">
+        <div class="justify-content-center error">
+            <h1>404 Error</h1>
+            <hr>
+            <h4 class="text-center mt-3">Page Not Found</h4>
+            <br>
+            <p>Sorry! The page you're looking for doesn't exist. Click below to return to the homepage.</p>
+            <a href="{% url 'home' %}" class="submit btn btn-outline-dark d-inline">Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

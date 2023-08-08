@@ -1,0 +1,80 @@
+{% load static %}
+{% load cloudinary %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WeeSeeU">
+    <meta name="author" content="Sara Mentzer">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">   
+        (function(){      
+            emailjs.init("l-2Vinb9Tmnd3_5Cz");
+            })();
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid navalert-container">
+        <nav class="navbar navbar-dark navbar-expand-sm">
+
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <img src="{% static 'images/2.png' %}" alt="logo">
+                <ul class="navbar-nav mr-auto">
+                    <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link" href="#contact">Contact</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item mr-2"><a class="nav-link" href="/booking">Booking</a></li>
+                    <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="{% url 'account_logout' %}">Sign out</a></li>
+                    {% else %}
+                    <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="{% url 'account_login' %}">Sign In / Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="d-none d-md-block">
+                {% if user.is_authenticated %}
+                <a href="{% url 'account_logout' %}" class="btn btn-success">Sign Out</a>
+                {% else %}
+                <a href="{% url 'account_login' %}" class="btn btn-success">Sign In / Sign Up</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <!-- Copyright -->
+    <footer class="footer-container">
+        <div class="text-center p-1" style="background-color: #D2D1D1;">
+           <p class="text-black"> © 2023 Sara Mentzer. Only for educational purpose.</p>
+           <a href="https://www.facebook.com/"><i class="fab fa-facebook-square ms-3"></i></a>
+           <a href="https://www.twitter.com/"><i class="fab fa-twitter-square ms-3"></i></a>
+           <a href="https://www.instagram.com/"><i class="fab fa-instagram-square ms-3"></i></a>
+           <a href="https://www.youtube.com/"><i class="fab fa-youtube-square ms-3"></i></a>
+    <!-- Copyright -->
+    </footer>
+     <script type="text/javascript" src="{% static 'JS/sendEmail.js' %}"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

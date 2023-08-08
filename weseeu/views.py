@@ -4,23 +4,23 @@ from .models import Booking, Profile, Service
 from .forms import BookingForm
 from datetime import datetime
 from django.utils.dateparse import parse_date
-
+from django.contrib.auth.decorators import login_required
 
 def main_view(request):
-    return render(request, 'weseeu/index.html')
+    return render(request, 'index.html')
 
-
+@login_required
 def bookings_view(request):
     if (request.user.is_authenticated):
         bookings = Booking.objects.filter(user=request.user.id)
         context = {
             'bookings': bookings
         }  
-        return render(request, 'weseeu/bookings.html', context)
+        return render(request, 'bookings.html', context)
     else:
         return redirect('main')
 
-
+@login_required
 def add_booking(request):
     if request.method == 'POST':
         try:
@@ -39,7 +39,7 @@ def add_booking(request):
                         'form': form,
                         'error': 'Start date can not be the same or later then end date.'
                     }    
-                    return render(request, 'weseeu/add_booking.html', context)
+                    return render(request, 'add_booking.html', context)
 
                 #startdate_object = parse_date(request.POST.get('startdate'))  
                 #enddate_object = parse_date(request.POST.get('enddate'))
@@ -51,7 +51,7 @@ def add_booking(request):
                         'form': form,
                         'error': 'Selected booking date is not available for that service. Please select another date or contact us for assistance.'
                     }    
-                    return render(request, 'weseeu/add_booking.html', context)
+                    return render(request, 'add_booking.html', context)
 
                 form.instance.user_id = request.user.id
                 form.save()
@@ -65,7 +65,7 @@ def add_booking(request):
                     'form': form,
                     'error': 'Invalid values in booking request'
                 }
-                return render(request, 'weseeu/add_booking.html', context)
+                return render(request, 'add_booking.html', context)
         except Exception as e:
             form = BookingForm()
             # Hide confirmed when add booking
@@ -75,7 +75,7 @@ def add_booking(request):
                 'form': form,
                 'error': 'Exception:' + str(e)
             }
-            return render(request, 'weseeu/add_booking.html', context)
+            return render(request, 'add_booking.html', context)
     else:
         form = BookingForm()
         # Hide confirmed when add booking
@@ -86,9 +86,9 @@ def add_booking(request):
             'form': form,
             'error': ''
         }
-        return render(request, 'weseeu/add_booking.html', context)
+        return render(request, 'add_booking.html', context)
         
-
+@login_required
 def edit_booking(request, booking_id):
     item = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':
@@ -107,7 +107,7 @@ def edit_booking(request, booking_id):
                     'form': form,
                     'error': 'Start date can not be the same or later then end date.'
                 }    
-                return render(request, 'weseeu/add_booking.html', context)
+                return render(request, 'add_booking.html', context)
 
             if (Booking.get_booking_within_dates(request.POST.get('service'), startdate_object, enddate_object)):
                 # Hide confirmed when edit booking and user is not 'staff'
@@ -118,7 +118,7 @@ def edit_booking(request, booking_id):
                     'form': form,
                     'error': 'Selected booking date is not available for that service. Please select another date or contact us for assistance.'
                 }    
-                return render(request, 'weseeu/edit_booking.html', context)
+                return render(request, 'edit_booking.html', context)
 
 
             form.save()
@@ -128,7 +128,7 @@ def edit_booking(request, booking_id):
                 'form': form,
                 'error': 'Invalid values in booking request'
             }
-            return render(request, 'weseeu/edit_booking.html', context)
+            return render(request, 'edit_booking.html', context)
     
     form = BookingForm(instance=item)
     # Show only confirmed when user is 'staff'
@@ -138,14 +138,17 @@ def edit_booking(request, booking_id):
     context = {
         'form': form
     }
-    return render(request, 'weseeu/edit_booking.html', context)
+    return render(request, 'edit_booking.html', context)
 
+
+@login_required
 def delete_booking(request, booking_id):
     item = get_object_or_404(Booking, id=booking_id)
     item.delete()
     return redirect('booking')
 
 
+@login_required
 def edit_profile(request):
     if (request.user.is_authenticated):
         profile = Profile.objects.filter(user=request.user.id)
@@ -154,6 +157,6 @@ def edit_profile(request):
             'user': user,
             'profile': profile
         }  
-        return render(request, 'weseeu/profile.html', context)
+        return render(request, 'profile.html', context)
     else:
         return redirect('booking')
