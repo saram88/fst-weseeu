@@ -39,7 +39,8 @@
                     <li class="{% if request.path == '/about/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
                     <li class="{% if request.path == '/contact/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/contact">Contact</a></li>
                     {% if user.is_authenticated %}
-                    <li class="{% if request.path == '/booking/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/booking">Booking</a></li>
+                    <li class="{% if request.path == '/booking/' %}active{% endif %} nav-item mr-2"><a class="nav-link" href="/booking">Bookings</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link" href="/booking/add">Add booking</a></li>
                     <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="{% url 'account_logout' %}">Sign out</a></li>
                     {% else %}
                     <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="{% url 'account_login' %}">Sign In / Sign Up</a></li>
@@ -55,6 +56,21 @@
             </div>
         </nav>
     </div>
+
+    <!-- Messages start (CODE USED FROM CODE INSTITUTE BLOG WALKTHROUGH) -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Messages end -->
+
     <div>
         {% block content %}
         {% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block title %}WeSeeU | 500 Server Error{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- 500 ERROR MESSAGE (SERVER ERROR) -->
+<div class="container card card-body">
+    <div class="container">
+        <div class="justify-content-center error">
+            <h1>500 error</h1>
+            <hr>
+            <h3 class="text-center mt-3">Server Error</h3>
+            <br>
+            <p>Sorry! WeSeeU can't handle this request at the moment. Please return to the home page.</p>
+            <a href="{% url 'main' %}" class="submit btn btn-outline-dark d-inline">Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
