@@ -5,16 +5,23 @@
 
 {% block content %}
 
-<!-- 500 ERROR MESSAGE (SERVER ERROR) -->
-<div class="container card card-body">
-    <div class="container">
-        <div class="justify-content-center error">
-            <h1>500 error</h1>
-            <hr>
-            <h3 class="text-center mt-3">Server Error</h3>
-            <br>
-            <p>Sorry! WeSeeU can't handle this request at the moment. Please return to the home page.</p>
-            <a href="{% url 'main' %}" class="submit btn btn-outline-dark d-inline">Home</a>
+<!-- 500 ERROR -->
+
+
+<div class="container container-wrapper box">
+    <div class="row">
+        <div class="col-12 page-header">
+            <h2 class="text-uppercase">500 Error</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="justify-content-center error">
+                <h4 class="text-center mt-3">Server Error</h4>
+                <br>
+                <p>Sorry! WeSeeU can't handle this request at the moment. Please return to the home page.</p>
+                <a href="{% url 'main' %}" class="submit btn btn-outline-dark d-inline">Home</a>
+            </div>
         </div>
     </div>
 </div>

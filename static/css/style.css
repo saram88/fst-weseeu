@@ -36,8 +36,8 @@ body {
 
 .callout-container {
     height: 100vh;
-    /*background: url('/static/images/bg-image.jpg') no-repeat bottom right fixed;*/
-    background: url('{% static "images/bg-image.jpg" %}') no-repeat bottom right fixed;
+    background: url('/static/images/bg-image.jpg') no-repeat bottom right fixed;
+    /*background: url('{% static "images/bg-image.jpg" %}') no-repeat bottom right fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
