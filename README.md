@@ -1,7 +1,4 @@
-## Saras's README for WeSeeU 
-
-
-### Project WeSeeU / Intro
+## Project WeSeeU / Intro
   
 WeSeeU is a service company that offers virtual services for other companies in marketing and IT services. 
 WeeSeU can book customers themselves in the associated booking system provided, 
@@ -16,70 +13,70 @@ WeSeeU was born after a long time of insight. Realization that there are simpler
 - Link to any supplementary blog posts or project main pages.
 - If possible, include screenshots and demo videos.
 
-### Core Technical Concepts/Inspiration
+### User Experience(UX)
 
-By joining WeSeeU, you can easily focus on what your core business offers instead. Many of our customers have no idea how much time is spent on the work that cannot be derived to a certain income, and that this overhead cost is difficult to master financially. If you look at what your own hourly wage is per month, and then evaluate the number of hours spent in overhead tasks, you can easily see what it costs you. Time you could instead spend on developing your core business. WeSeeU always offers "try for hours" so you as a customer can know with certainty that you are getting quality for the money!
+My costumer is other business that run small or middle companys that need help to their administration. 
+By joining WeSeeU, you can easily focus on what your core business offers instead. Many of WeSeeU customers have no idea how much time is spent on the work that cannot be derived to a certain income, and what this overhead cost is difficult to master financially. If you look at what your own hourly wage is per month, and then evaluate the number of hours spent in overhead tasks, you can easily see what it costs you. Time you could instead spend on developing your core business. WeSeeU always offers "try for hours" so you as a customer can know with certainty that you are getting quality for the money!
 
+## User Stories
 
-### Getting Started/Requirements/Prerequisites/Dependencies
+### Getting Started/ Enviroment Setup
 
-To install and set things up, follow the step below.
+- As the developer, I can create a new project so that I can develop the website.
+- As the developer, I can create a new project on GitHub so that I am ready to start developing the website.
+- As the developer I can install Django and any other libraries needed so that I can start developing the website.
+- As the developer, I can test the project locally so that I will be able to see any changes locally before pushing to GitHub / Heroku.
 
-#### Getting things set up 
+### | Landing Page 
+As the developer, I can design a functional, easy-to-use landing page so that users can easily navigate through pages and use the site.
 
+#### User Stories
+- As a user, I can contact the developer through social links so that learn more about their work or get questions answered.
+- As a user, I can use the website on all device sizes so that I can see the same information on small and large devices.
+- As a user, I can use the navigation bar so that I can view all pages of the website easily
 
+### | Initial Deployment
+As the developer, I can deploy the app on Heroku so that users can view and interact with the site publicly.
 
-#### Process to set things up
+#### User Stories
+- As the developer I can deploy the app to Heroku so that I can ensure it works properly before heavily starting development on the site.
+- As the developer, I can link the GitHub repository to the Heroku app so that when I commit changes on GitHub they are reflected on Heroku automatically.
 
-1. Created a new repository from Github CI-full-tamplate and included bootstrap .4.6.2 version to my own github profile.
-2. Took the HTML code and the CSS file (a certain part of it) and based on that I then had the framework to build on my code for designing functions and layout
-3. Nästa steg, vad sattes upp?
-4. I start buil my sites for costumers that want to be a costumer, book and for my employeds that need a admin profile and then i realize i also need a superuser that can change everything. 
+### | Website Aesthetics
+As the developer, I can design an aesthetically pleasing webpage so that users can easily navigate the site.
+#### User Stories
+- As the developer, I can use complimentary colors so that users can navigate the website easily.
+- As a user, I can see the favicon on the web tab so that know I'm on the WeSeeU page.
+- As a user, I can click the logo of the website so that I can easily get back to the homepage.
 
-### Installation
+### | User Account
+As the developer, I can create a register / login feature so users and create an account and login / logout.
+#### User Stories
+- As a user I can sign up, log in and log out so that I can see the features available to registered users.
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+### | Site Administration & Booking
+As a site admin, I can manage all bookings and create, read, update and delete services items so that I can control site bookings.
+#### User Stories
+- As a user, I can create, read, update or delete service items so that the menu is up to date.
+- As a logged in user, I can click the 'booking' button so that I can easily view and manage my booking.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-- Configuring It
+### | Testing & Documentation
+As the developer, I can concisely document my testing and deployment methods so assessors and other developers can understand the website from a technical standpoint.
+#### User Stories
+- As the developer, I can create a README.md file so that other developers and the assessors can have an in-depth look at the website's structure and programming.
+- As the developer, I can create a TESTING.md file so that the assessors can see the bugs and their solutions identified and the validation passed.
+- As the developer, I can concisely describe the Heroku deployment process so that others know how to deploy an app on Heroku.
 
-VAD SKA JAG SKRIVA HÄR??
+### | Error Pages
+As the developer, I can create status error pages so users will know if there is a problem.
+#### User Stories
+- As the developer I can create a 500 error page so that users will know if there are internal server errors.
+- As the developer I can create a 404 error page so that users will know when they've tried to access a page that doesn't exist.
 
-- Running it
-  
-VAD SKA JAG SKRTIVA HÄR??
-
-### More Specific Topics (+ sample sub-categories)
-
-#### Versioning: Services, APIs, Systems
-
-VAD SKA JAG SKRTIVA HÄR??
-
-#### Tests
-
-- Vilka tester ska jag köra??
-
-### Contributing
-????
-#### Contributor Guidelines
-????
 
 ### Design
 
 The website design is set in simple, paragraph form, which is intended to make it easier for the reader to navigate. The navigation bar is clear on each page, as is the footer and the pages are labelled with a 'banner' format thus ensuring users know where they are at all times. 
-
 
 #### Color Scheme
 The color palette was created using the palette generator [Coolers](https://coolors.co/).
@@ -95,37 +92,200 @@ One background picture that floats when you move the webbpage up and down. The o
  
 
 #### Fonts
+ The "Times new roman" 
+ 
+## Agile Methodology
+
+The agile methodology was used throughout project development. User stories and the steps of the process are shown on [GitHub projects](https://github.com/users/saram88/projects/8/views/1)
+
+Creating User stories for this project facilitated a smooth working environment where both general and something i need to make a good overwiev what i should do and want to do. 
+
+### Form Validation
+- All fields in the contact form are required. If a user attempts to submit the form without filling in all fields, a warning text will appear at the bottom of the form asking them to complete the fields. The form will not submit until all fields are filled in. Once this is done, a message will pop up that the form was submitted successfully.
 
 
-#### Format for commit messages
+## Data Model
+I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views. Django AllAuth was used for user authentication.
 
-1. Git add .
-2. Git commit -m "TEXT"
-3. Git Push
+The Customer model displays a working contact form on the Contact Us page. [Email js](https://www.emailjs.com/) was also used to ensure queries are addressed. For the purpose of this project, the emails arrive in my personal inbox.
 
-### Next steps/ things i want to devolope
+## Database Design
+An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to better visualize the relationships of variables between data structures. 
 
-- I want costumer to set the time and get a confirme right away, not after we as a company have confirmed in email
-- Logged in while being able to move to the main menu
+Django-AllAuth was implemented for user authentication.
 
-### Most common bugs when i build my site
+## Security Features and Defensive Design
 
-- Could not deploy to heroku. Understood i need to set up my static files to another( Cloudinary)to make it work
-  
-### Known bugs that still remains
+### User Authentication
 
--
+- Django's LoginRequiredMixin is used to ensure that any requests to access secure pages by non-authenticated or, in some cases, non-admin users, are redirected to the login page. 
 
-### Contact
+## Features
 
-- Sara_mentzer@hotmail.com
-- Contact me at LinkedIn https://www.linkedin.com/in/sara-mentzer-17b9b1170/
-- Contact me at GitHub https://github.com/saram88
+### Header
 
-### License
+![Header](/documentation/readme_images/header.png)
+
+**Logo**
+- A customized logo was created using[Canva](https://www.canva.com/), it was made by my self.
+- The logo is positioned at the top left of the navigation bar. The logo is linked to the home page so the user can easily navigate the site.
+
+![Header](/documentation/readme_images/Logo.png)
+
+**Navigation Bar**
+
+- The navigation bar is present at the top of every page and includes all links to the other pages.
+
+### Footer
+- The footer section includes working links to GitHub, Twitter, Instagram and Facebook. Clicking each link will open a separate browser page to the login of that website.
+
+### Home Page
+
+**Call to Action Section**
+- The landing page includes a call to action section which encourages the user to book a service with WeSeeU.
+
+![Landing Page - Call to Action](/documentation/readme_images/header.png)
+
+
+**About**
+- The 'About' section gives a brief overview of who we are so they can get saftey inscoure that we are a good company.
+
+
+- Django allauth was installed and used to create the Sign up, Log In and Log Out functionality and pages. 
+
+![Successful Log In](/documentation/readme_images/success-login.png)
+![Successful Log Out](/documentation/readme_images/success-logout.png)
+
+- Success messages inform the user if they have logged in and logged out successfully and are present on the site for 3 seconds before automatically disappearing.
+
+### Menu Page
+
+**Menu Section for non-authenticated and non-admin visitors**
+
+- This page displays that you can schoose to be a member
+- Non logged in visitors and non-admin users will see a static page with items, they will not be able to add, edit, or delete items.
+
+
+**Menu Section for admin users**
+
+- The overall look of the page is the same. If a user is logged in as an Admin super user, they can add, edit and delete menu items.
+
+![Menu Page - Admin users](/documentation/readme_images/admin_user.png)
 
 
 
+### Contact Us Page
+The Contact Us page includes a Google Map of where the company is. Given that WeSeeU is not a real place, a substitute was used for the purpose of this project. 
+
+![Contact Us Page](/documentation/readme_images/contact.png)
+
+- The page includes a contact form on the left-hand side that was implemented with [Email JS](https://www.emailjs.com/) and a Google Map on the right side.
+
+- Filling out the contact form will send a message to my personal in box. The user is alerted both after successfully filling out and submitting the form and if they need to fill in a field. All fields are obligatory. The success or error messages stay for three seconds and disappear automatically.
+
+
+### Book A Service
+
+![Book A service Page](/documentation/readme_images/addbooking.png)
+
+- The Add booking page is visible only to authenticated, logged in users.
+- The user fills out the form, selecting a service choice and the dates they want to book. 
+- The dates are static by default to show the formatting and the user can change to different dates.
+- Clicking 'Add booking' will take them to the My Bookings page where they will see their booking.
+
+![Book A service Page](/documentation/readme_images/mybooking.png)
+
+### My Bookings
+
+- The My Bookings page shows the bookings of the logged in user.
+- On each booking card, there are buttons to edit and delete the booking. 
+- Users can only delete their own bookings.
+
+### Edit A Booking
+
+![Edit Bookings Page](/documentation/readme_images/edit-booking.png)
+
+- The Edit Your Booking card shows the specific booking the user wants to edit with the fields pre-populated.
+- They can change any of the fields and click 'Update' when finished.
+- Clicking 'Update' will save their changes and revert them back to the My Bookings page where they will see a message saying their booking was updated correctly.
+- The success message remains on the screen for three seconds before fading automatically. 
+
+![Edit Bookings Success](/documentation/readme_images/mybooking.png)
+
+### Delete A Booking
+
+![Delete A Booking Page](/documentation/readme_images/deletebooking.png)
+
+- Logged in users can delete their own bookings by clicking the 'delete' button on the My Bookings page. 
+- They will be taken to the Delete Your Booking page and asked if they're sure they want to delete this specific booking.
+- Clicking 'Cancel' will revert them to the My Bookings page.
+- Clicking 'Delete Booking' will delete that booking permanently and take them back to the My Bookings page where they will see a message saying their booking was deleted successfully and they will no longer see that booking.
+
+
+
+### Future Features
+
+I have some improvements but have chosen not to include them in this version as there was not enough time, but also because I received the feedback from friends and family at a final stage, so automatically chose to include it in a next version.
+
+
+1. I would like the costumer to sign in and add a booking and get a confirmed message right away, and not need to wait for us to send them a confirming mail.
+3. Incorporate a payment option, rates and pricing for booking. 
+4. A page that you can se serivces in a list and se other costumers review and get tips what they should book.
+5. A chat, so the costumer can ask questions right away and book faster. And if you are a paid costumer you get priority service. 
+6. That you can move around on the webpage from headmenu to booking and in the other direction as well.
+
+## Deployment - Heroku
+
+The following steps were taken to deploy the live website to Heroku from the GitHub repository:
+
+### Create a Heroku App:
+- Log into your [Heroku](https://dashboard.heroku.com/apps) account or create an account.
+- On the main page click the 'New' button at the top right corner and select 'Create New App' from the dropdown menu. 
+![Heroku Create App](/documentation/readme_images/heroku-create-new.png)
+- Enter in a unique app name
+- Select your region
+- Click 'Create App'
+![Heroku New App](/documentation/readme_images/heroku-create-app.png)
+
+### Attach the Postgres database:
+- In the Resources tab, under add-ons, type in Postgres and select the Heroku Postgres option.
+- Copy the DATABASE_URL located in Config Vars in the Settings Tab.
+
+### Prepare the environment and settings.py file:
+- In your GitPod workspace, create an env.py file in the main directory.
+- Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file. 
+- Update the settings.py file to import the env.py file and add the SECRETKEY and DATABASE_URL file paths.
+- Comment out the default database configuration.
+- Save all files and make migrations.
+- Add the Cloudinary URL to env.py
+- Add the Cloudinary libraries to the list of installed apps.
+- Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path.
+- Link the file to the templates directory in Heroku.
+- Change the templates directory to TEMPLATES_DIR
+- Add Heroku to the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost']
+
+### Create files / directories
+- Create a requirements.txt file
+- Create directories in the main directory; media, static and templates.
+- Create a "Procfile" in the main directory and add the following: web: gunicorn project_name.wsgi
+- Make sure the Procfile is capitalized and only has one line.
+
+### Update Heroku Config Vars
+Add the following Config Vars in Heroku:
+- SECRET_KEY value 
+- CLOUDINARY_URL
+- PORT = 8000
+- DISABLE_COLLECTSTATIC = 1
+- HEROKU_POSTGRESQL_OLIVE_URL value
+- DATABASE_URL value
+
+### Deploy
+- Make sure DEBUG = False in the settings.py
+- Go to the deploy tab on Heroku and connect to GitHub, then to the required repository. 
+- Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the GitHub repository is updated.
+- Click 'Open App' to view the deployed live site.
+
+The site is now live and operational.
 
 ## Languages
 
@@ -134,17 +294,38 @@ One background picture that floats when you move the webbpage up and down. The o
 - CSS
 - Javascript
 
+#### Format for commit messages
+
+1. Git add .
+2. Git commit -m "TEXT"
+3. Git Push
+
+
+### Most common bugs when i build my site
+
+- Could not deploy to heroku. Understood i need to set up my static files to another( Cloudinary)to make it work
+  
+## Credits 
+
+I have pick up idea from my family and friends what they thougt can be a good webpage for my future costumer, but i have also pick up ideas when it comes to this README from [Github] (https://github.com/Kaylaesmith1/bed-and-breakfast/blob/main/README.md) 
+I have also use google translate to make my english to work well. 
+
+
+### Media
+
+- The photos used on the home and sign up page are from This Open Source site
+- The images used for the gallery page were taken from this other open source site
+- So
+
 ## Frameworks - Libraries - Programs Used 
+- [Font Awesome](https://fontawesome.com/): The icons in the footer
 - [Django](https://www.djangoproject.com/): Main python framework used in the development of this project
 - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): Authentication library used to create user accounts
 - [PostgreSQL](https://www.postgresql.org/) Used as the database for this project.
 - [Heroku](https://dashboard.heroku.com/login) - Used as the cloud-based platform to deploy the site.
-- [Am I Responsive](https://amiresponsive.co.uk/) - Used to verify responsiveness of website on different devices.
 - [Figma](https://www.figma.com/) - Used to create wireframes for both desktop and mobile visuals.
 - [Favicon](https://favicon.io/) - Used to create the wine glass icon for the browser tab.
-- [Font Awesome](https://fontawesome.com/) - Used for icons on the home page and stars on the About page.
 - [GitHub](https://github.com/) - Used for version control and agile methodology.
-- [Google Fonts](https://fonts.google.com/) - Imported and used to change fonts on pages from default fonts.
 - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
 - [PEP8 Online](https://pep8ci.herokuapp.com/#) - Used to validate all Python code pages in the project.
 - [Jshint](https://jshint.com/) - Used to validate the JavaScript page.
@@ -152,22 +333,12 @@ One background picture that floats when you move the webbpage up and down. The o
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) Used to manage Django Forms
 - [Cloudinary](https://cloudinary.com/): Used to upload all images used on the website.
 - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/): CSS used for developing responsiveness and styling the website.
-- [Hatchful](https://hatchful.shopify.com/): Used to generate custom logo found on all pages.
-- [Wondershare](https://www.wondershare.com/): Used to style aspects of the logo (remove background).
 - [Canva](https://www.canva.com/): Used for page image banners (colored overlay and opacity)
 - [Google](https://www.google.com/): All images used were sourced from a Google search.
 - [EmailJS](https://www.emailjs.com/): Used to link the contact form to developer's personal email account.
-- [Pixelied](https://pixelied.com/features/photo-filters/convert-image-to-black-and-white): Used to convert image to black and white before using a colored overlay for banners on pages.
 
+### Contact
 
-
-
-//*--*//
-
-USER SIDE
-- Boka
-- Sign in/sign up
-- 
--Inloggad samtidigt som man kan förflytta sig till huvudmenyn och vice versa. 
-
-
+- Sara_mentzer@hotmail.com
+- Contact me at LinkedIn https://www.linkedin.com/in/sara-mentzer-17b9b1170/
+- Contact me at GitHub https://github.com/saram88
