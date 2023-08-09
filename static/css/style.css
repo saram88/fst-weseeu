@@ -16,7 +16,7 @@ body {
 .navbar {
     margin-bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgb(136, 133, 133);
     border: 0;
 }
 
@@ -33,11 +33,9 @@ body {
 }
 
 /*container */
-
-.callout-container {
+.callout-container_old {
     height: 100vh;
     background: url('/static/images/bg-image.jpg') no-repeat bottom right fixed;
-    /*background: url('{% static "images/bg-image.jpg" %}') no-repeat bottom right fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -190,10 +188,10 @@ mark
     right: 0;
     bottom: 0;
     position: fixed;
+    background-color: rgb(136, 133, 133);
 }
 
 .footer-container .text-center.p-1 a 
 {
     color: black;
 }
-

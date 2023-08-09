@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}WeSeeU | Add booking{% endblock %}
+{% block content %}
+
+<div class="container container-wrapper box">
+    <div class="row">
+        <div class="col-12 page-header">
+            <h2 class="text-uppercase">Confirm booking</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div>
+                <form method="POST" action="/booking/confirm/{{ form.instance.pk }}">
+                    {% csrf_token %}
+                    <div>
+                        <p>
+                            Are you sure you want to delete your booking?
+                        </p>
+                        <p>
+                            <button class="btn btn-success" type="submit">Confirm booking</button>
+                            <a class="btn btn-outline-dark" href="/booking/">Cancel</a>
+                        </p>
+                    </div>
+                    {% if error|length > 0 %}
+                    <div class="alert alert-danger">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

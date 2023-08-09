@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from .models import Booking, Profile, Service
 from .forms import BookingForm
 from datetime import datetime
+from django.utils import timezone
 from django.utils.dateparse import parse_date
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -37,13 +38,18 @@ def error_500(request):
 @login_required
 def bookings_view(request):
     if (request.user.is_authenticated):
-        bookings = Booking.objects.filter(user=request.user.id)
+        if (request.user.is_staff):
+            bookings = Booking.objects.all()
+        else:
+            bookings = Booking.objects.filter(user=request.user.id)
+        
         context = {
             'bookings': bookings
         }  
         return render(request, 'bookings.html', context)
     else:
         return redirect('main')
+
 
 @login_required
 def add_booking(request):
@@ -55,6 +61,17 @@ def add_booking(request):
 
                 startdate_object = datetime.strptime(request.POST.get('startdate'), '%Y-%m-%d %H:%M')
                 enddate_object = datetime.strptime(request.POST.get('enddate'), '%Y-%m-%d %H:%M')
+
+                now = datetime.now(timezone.utc)
+                if (startdate_object <= now):
+                    # Hide confirmed when add booking
+                    field = form.fields['confirmed']
+                    field.widget = field.hidden_widget()
+                    context = {
+                        'form': form,
+                        'error': 'Start date can not be the same or before current time.'
+                    }    
+                    return render(request, 'add_booking.html', context)
 
                 if (startdate_object >= enddate_object):
                     # Hide confirmed when add booking
@@ -113,7 +130,8 @@ def add_booking(request):
             'error': ''
         }
         return render(request, 'add_booking.html', context)
-        
+
+
 @login_required
 def edit_booking(request, booking_id):
     item = get_object_or_404(Booking, id=booking_id)
@@ -166,6 +184,31 @@ def edit_booking(request, booking_id):
         'form': form
     }
     return render(request, 'edit_booking.html', context)
+
+
+@login_required
+def confirm_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    form = BookingForm(request.POST, instance=booking)
+    # form = BookingForm(request.POST, instance=booking, initial={'confirmed': datetime.now().strftime('%Y-%m-%d %H:%M')})
+    if request.method == "POST":
+
+        try:
+            Booking.set_booking_confirm(booking_id, datetime.now().strftime('%Y-%m-%d %H:%M'))
+            messages.success(request, "Booking has been confirmed")
+            return redirect('booking')
+        except Exception as e:
+            context = {
+                'form': form,
+                'error': 'Exception: ' + str(e)
+            }
+            return render(request, 'confirm_booking.html', context)
+        
+    context = {
+        'form': form
+    }
+    return render(request, 'confirm_booking.html', context)
+
 
 
 @login_required

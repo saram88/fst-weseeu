@@ -27,8 +27,7 @@ class BookingForm(forms.ModelForm):
                 'class': 'form-control datetimefield'
                 }
             )
-
-
+    
     class Meta:
         model = Booking
         fields = ['service', 'startdate', 'enddate', 'confirmed', 'description']

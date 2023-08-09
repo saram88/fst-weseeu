@@ -66,3 +66,6 @@ class Booking(models.Model):
             return True
         else:
             return False
+
+    def set_booking_confirm(booking_id, confirm_date):
+        Booking.objects.filter(id=booking_id).update(confirmed=confirm_date) 

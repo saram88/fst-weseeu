@@ -23,6 +23,9 @@
                             {% endif %}
                             <p>
                                 <button class="btn btn-info" type="submit">Save booking</button>
+                                {% if user.is_staff %}
+                                <a class="btn btn-success" href="/booking/confirm/{{ form.instance.pk }}">Confirm booking</a>
+                                {% endif %}
                                 <a class="btn btn-danger" href="/booking/delete/{{ form.instance.pk }}">Delete booking</a>
                                 <a class="btn btn-outline-dark" href="/booking/">Cancel</a>
                             </p>
