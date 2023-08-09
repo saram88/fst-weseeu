@@ -101,18 +101,19 @@ The agile methodology was used throughout project development. User stories and 
 Creating User stories for this project facilitated a smooth working environment where both general and something i need to make a good overwiev what i should do and want to do. 
 
 ### Form Validation
-- All fields in the contact form are required. If a user attempts to submit the form without filling in all fields, a warning text will appear at the bottom of the form asking them to complete the fields. The form will not submit until all fields are filled in. Once this is done, a message will pop up that the form was submitted successfully.
+- All fields in the contact forms are required. If a user attempts to submit the form without filling in all fields, a warning text will appear at the bottom of the form asking them to complete the fields. The form will not submit until all fields are filled in.
 
 
 ## Data Model
 I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views. Django AllAuth was used for user authentication.
 
-The Customer model displays a working contact form on the Contact Us page. [Email js](https://www.emailjs.com/) was also used to ensure queries are addressed. For the purpose of this project, the emails arrive in my personal inbox.
+The Customer model displays a working contact form on the Contact page and in Booking page. [Email js](https://www.emailjs.com/) was also used to ensure queries are addressed. For the purpose of this project, the emails arrive in my personal inbox.
 
 ## Database Design
-An Entity Relationship Diagram was created using [Figma](https://www.figma.com/) to better visualize the relationships of variables between data structures. 
+An Entity Relationship Diagram was created using [DB Designer](https://erd.dbdesigner.net/) to better visualize the relations between data tables. 
 
-Django-AllAuth was implemented for user authentication.
+![Database Schema](/documentation/readme_images/db.png)
+
 
 ## Security Features and Defensive Design
 
@@ -303,7 +304,7 @@ The site is now live and operational.
 
 ### Most common bugs when i build my site
 
-- Could not deploy to heroku. Understood i need to set up my static files to another( Cloudinary)to make it work
+- Could not deploy to heroku. Understood i need to set up my static files to another (Cloudinary) to make it work
   
 ## Credits 
 
@@ -323,7 +324,7 @@ I have also use google translate to make my english to work well.
 - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): Authentication library used to create user accounts
 - [PostgreSQL](https://www.postgresql.org/) Used as the database for this project.
 - [Heroku](https://dashboard.heroku.com/login) - Used as the cloud-based platform to deploy the site.
-- [Figma](https://www.figma.com/) - Used to create wireframes for both desktop and mobile visuals.
+- [DB Designer](https://erd.dbdesigner.net/) - Used to visualize data models.
 - [Favicon](https://favicon.io/) - Used to create the wine glass icon for the browser tab.
 - [GitHub](https://github.com/) - Used for version control and agile methodology.
 - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
