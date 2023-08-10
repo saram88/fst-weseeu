@@ -308,6 +308,12 @@ The site is now live and operational.
 I have pick up idea from my family and friends what they thougt can be a good webpage for my future costumer, but i have also pick up ideas when it comes to this README from [Github] (https://github.com/Kaylaesmith1/bed-and-breakfast/blob/main/README.md) 
 I have also use google translate to make my english to work well. 
 
+Other credits
+- [W3Schools](https://www.w3schools.com/)
+- [Django Docs](https://docs.djangoproject.com/en/4.0/)
+- [Bootstrap 4.6 Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
+- [Stack Overflow](https://stackoverflow.com/)
 
 ### Media
 
@@ -323,8 +329,8 @@ I have also use google translate to make my english to work well.
 - [DB Designer](https://erd.dbdesigner.net/) - Used to visualize data models.
 - [Favicon](https://favicon.io/) - Used to create the icon for the browser tab.
 - [GitHub](https://github.com/) - Used for version control and agile methodology.
-- [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
-- [PEP8 Online](https://pep8ci.herokuapp.com/#) - Used to validate all Python code pages in the project.
+- [W3C](https://validator.w3.org/) - Used for HTML & CSS Validation.
+- [pep8](https://pypi.org/project/pep8/) - Used to validate all Python code pages in the project.
 - [Jshint](https://jshint.com/) - Used to validate the JavaScript page.
 - [Coolors](https://coolors.co/) - Used to create color scheme.
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) Used to manage Django Forms
@@ -333,6 +339,7 @@ I have also use google translate to make my english to work well.
 - [Canva](https://www.canva.com/): Used for page image banners (colored overlay and opacity)
 - [Google](https://www.google.com/): All images used were sourced from a Google search.
 - [EmailJS](https://www.emailjs.com/): Used to link the contact form to developer's personal email account.
+
 
 ### Contact
 
