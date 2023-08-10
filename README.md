@@ -88,7 +88,7 @@ One background picture that floats when you move the webbpage up and down. The o
  
 
 #### Fonts
- The "Times new roman" 
+ Roboto and sans-serif. They work well for webbpage and thats why i choose them. 
  
 ## Agile Methodology
 
@@ -230,6 +230,7 @@ I have some improvements but have chosen not to include them in this version as 
 4. A page that you can se serivces in a list and se other costumers review and get tips what they should book.
 5. A chat, so the costumer can ask questions right away and book faster. And if you are a paid costumer you get priority service. 
 6. That you can move around on the webpage from headmenu to booking and in the other direction as well.
+7. Ad persons connected to services. So you as costumer can look what person do what services. 
 
 ## Deployment - Heroku
 
