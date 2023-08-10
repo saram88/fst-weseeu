@@ -9,9 +9,7 @@ The system is fully developed to start using. There is development potential but
 
 WeSeeU was born after a long time of insight. Realization that there are simpler and more cost-effective ways to handle both smaller and larger projects, which are not within the entrepreneur's core business but which are necessary to carry out in order to maintain their place in the market, carry out their mission towards their customer or to develop. With our solution, the customer can easily book in for services through our user-friendly booking system.
 
-
-- Link to any supplementary blog posts or project main pages.
-- If possible, include screenshots and demo videos.
+![Home](/documentation/readme_images/home_menu.png)
 
 ### User Experience(UX)
 
@@ -29,7 +27,6 @@ By joining WeSeeU, you can easily focus on what your core business offers instea
 
 ### | Landing Page 
 As the developer, I can design a functional, easy-to-use landing page so that users can easily navigate through pages and use the site.
-
 #### User Stories
 - As a user, I can contact the developer through social links so that learn more about their work or get questions answered.
 - As a user, I can use the website on all device sizes so that I can see the same information on small and large devices.
@@ -37,7 +34,6 @@ As the developer, I can design a functional, easy-to-use landing page so that us
 
 ### | Initial Deployment
 As the developer, I can deploy the app on Heroku so that users can view and interact with the site publicly.
-
 #### User Stories
 - As the developer I can deploy the app to Heroku so that I can ensure it works properly before heavily starting development on the site.
 - As the developer, I can link the GitHub repository to the Heroku app so that when I commit changes on GitHub they are reflected on Heroku automatically.
@@ -50,6 +46,7 @@ As the developer, I can design an aesthetically pleasing webpage so that users c
 - As a user, I can click the logo of the website so that I can easily get back to the homepage.
 
 ### | User Account
+![Home](/documentation/readme_images/signinout.png)
 As the developer, I can create a register / login feature so users and create an account and login / logout.
 #### User Stories
 - As a user I can sign up, log in and log out so that I can see the features available to registered users.
@@ -85,7 +82,7 @@ The color scheme is chosen based on what statistically you say colors are associ
 
 All combinations of the colors used illustrate a contrast between background and text to ensure maximum user accessibility.
 
-![Color Palette](/documentation/readme_images/Color_palette.png)
+![Color Palette](/documentation/readme_images/color_palette.png)
 
 #### Image
 One background picture that floats when you move the webbpage up and down. The other images follow the theme to match UX and so my costumer get a good experience.
@@ -125,13 +122,13 @@ An Entity Relationship Diagram was created using [DB Designer](https://erd.dbdes
 
 ### Header
 
-![Header](/documentation/readme_images/header.png)
+![Header](/documentation/readme_images/navbar.png)
 
 **Logo**
-- A customized logo was created using[Canva](https://www.canva.com/), it was made by my self.
+- A customized logo was created using [Canva](https://www.canva.com/), it was made by my self.
 - The logo is positioned at the top left of the navigation bar. The logo is linked to the home page so the user can easily navigate the site.
 
-![Header](/documentation/readme_images/Logo.png)
+![Header](/documentation/readme_images/logo.png)
 
 **Navigation Bar**
 
@@ -145,7 +142,7 @@ An Entity Relationship Diagram was created using [DB Designer](https://erd.dbdes
 **Call to Action Section**
 - The landing page includes a call to action section which encourages the user to book a service with WeSeeU.
 
-![Landing Page - Call to Action](/documentation/readme_images/header.png)
+![Landing Page - Call to Action](/documentation/readme_images/calltoaction.png)
 
 
 **About**
@@ -154,8 +151,8 @@ An Entity Relationship Diagram was created using [DB Designer](https://erd.dbdes
 
 - Django allauth was installed and used to create the Sign up, Log In and Log Out functionality and pages. 
 
-![Successful Log In](/documentation/readme_images/success-login.png)
-![Successful Log Out](/documentation/readme_images/success-logout.png)
+![Successful Log In](/documentation/readme_images/login.png)
+![Successful Log Out](/documentation/readme_images/logout.png)
 
 - Success messages inform the user if they have logged in and logged out successfully and are present on the site for 3 seconds before automatically disappearing.
 
@@ -178,7 +175,7 @@ An Entity Relationship Diagram was created using [DB Designer](https://erd.dbdes
 ### Contact Us Page
 The Contact Us page includes a Google Map of where the company is. Given that WeSeeU is not a real place, a substitute was used for the purpose of this project. 
 
-![Contact Us Page](/documentation/readme_images/contact.png)
+![Contact Us Page](/documentation/readme_images/contactus.png)
 
 - The page includes a contact form on the left-hand side that was implemented with [Email JS](https://www.emailjs.com/) and a Google Map on the right side.
 
@@ -194,7 +191,6 @@ The Contact Us page includes a Google Map of where the company is. Given that We
 - The dates are static by default to show the formatting and the user can change to different dates.
 - Clicking 'Add booking' will take them to the My Bookings page where they will see their booking.
 
-![Book A service Page](/documentation/readme_images/mybooking.png)
 
 ### My Bookings
 
@@ -202,16 +198,15 @@ The Contact Us page includes a Google Map of where the company is. Given that We
 - On each booking card, there are buttons to edit and delete the booking. 
 - Users can only delete their own bookings.
 
-### Edit A Booking
+![Edit Bookings Page](/documentation/readme_images/mybooings.png)
 
-![Edit Bookings Page](/documentation/readme_images/edit-booking.png)
+### Edit A Booking
 
 - The Edit Your Booking card shows the specific booking the user wants to edit with the fields pre-populated.
 - They can change any of the fields and click 'Update' when finished.
 - Clicking 'Update' will save their changes and revert them back to the My Bookings page where they will see a message saying their booking was updated correctly.
 - The success message remains on the screen for three seconds before fading automatically. 
 
-![Edit Bookings Success](/documentation/readme_images/mybooking.png)
 
 ### Delete A Booking
 
@@ -316,7 +311,6 @@ I have also use google translate to make my english to work well.
 
 - The photos used on the home and sign up page are from This Open Source site
 - The images used for the gallery page were taken from this other open source site
-- So
 
 ## Frameworks - Libraries - Programs Used 
 - [Font Awesome](https://fontawesome.com/): The icons in the footer
