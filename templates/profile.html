@@ -19,7 +19,11 @@
 
                         {{ profile }}
                         <div>
-                            {{ error }}
+                            {% if error|length > 0 %}
+                            <div class="alert alert-danger">
+                                {{ error }}
+                            </div>
+                            {% endif %}
                             <p>
                                 <button class="btn btn-info" type="submit">Save</button>
                                 <a class="btn btn-outline-dark" href="/booking/">Cancel</a>

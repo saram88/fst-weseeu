@@ -1,5 +1,22 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #b8b8b85b;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+input[type="email"] {
+    width: 100%;
+}
+
+input[type="password"] {
+    width: 100%;
 }
 
 /* Navbar */
@@ -33,18 +50,6 @@ body {
 }
 
 /*container */
-.callout-container_old {
-    height: 100vh;
-    background: url('/static/images/bg-image.jpg') no-repeat bottom right fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
 
 .opaque-overlay {
     position: absolute;
@@ -56,7 +61,8 @@ body {
 }
 
 .container-service {
-    background-color: #b8b8b85b;
+    background-color: transparent
+    /*background-color: #b8b8b85b;*/
 }
 
 .container-contact {
@@ -79,7 +85,7 @@ body {
 }
 
 .container-wrapper {
-    background-color: #b8b8b85b;
+    
     padding-top: 40px; 
     padding-bottom: 60px;
 }
@@ -175,9 +181,10 @@ mark
     bottom: 0;
     position: fixed;
     background-color: rgb(136, 133, 133);
+    color: #FFF;
 }
 
 .footer-container .text-center.p-1 a 
 {
-    color: ffffff;
+    color: #FFF;
 }

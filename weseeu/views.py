@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import get_user_model
 from .models import Booking, Profile, Service
-from .forms import BookingForm
+from .forms import BookingForm, UpdateUserForm, UpdateProfileForm
 from datetime import datetime
 from django.utils import timezone
 from django.utils.dateparse import parse_date
@@ -230,11 +230,24 @@ def delete_booking(request, booking_id):
 @login_required
 def edit_profile(request):
     if (request.user.is_authenticated):
-        profile = Profile.objects.filter(user=request.user.id)
-        user = get_user_model()
+
+        if request.method == "POST":
+            user_form = UpdateUserForm(request.POST, instance=request.user)
+            profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+            if user_form.is_valid() and profile_form.is_valid():
+                user_form.save()
+                profile_form.save()
+                messages.success(request, 'Your profile is updated successfully')
+                return redirect(to='booking')
+
+        else:
+            user_form = UpdateUserForm(instance=request.user)
+            profile_form = UpdateProfileForm(instance=request.user.profile)
+        
+        
         context = {
-            'user': user,
-            'profile': profile
+            'user': user_form,
+            'profile': profile_form
         }  
         return render(request, 'profile.html', context)
     else:

@@ -4,6 +4,9 @@
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <!-- SIGN UP FORM START -->
@@ -17,7 +20,7 @@
             <section class="signup">
                 <div class="row">
                     <div class="col-12 page-header">
-                        <h2 class="text-uppercase">Log in</h2>
+                        <h2 class="text-uppercase">Sign up</h2>
                         <hr class="block-divider block-divider--short block-divider--white">
                     </div>
                 </div>
@@ -29,7 +32,9 @@
                             </p>
                             <form class="login" method="POST" action="{% url 'account_signup' %}">
                                 {% csrf_token %}
-                                {{ form.as_p }}
+
+                                {{form.as_p}}
+
                                 {% if redirect_field_value %}
                                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                                 {% endif %}

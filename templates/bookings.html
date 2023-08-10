@@ -27,12 +27,12 @@
                             </thead>
                             <tbody>
                                 {% for booking in bookings %}
-                                <tr>
+                                <tr {{ booking.confirmed|date:'Y-m-d H:i'|default:""}}>
                                     <th scope="row">{{ booking.id }}</th>
                                     <td><a href="/booking/edit/{{ booking.id }}">{{ booking.service.name }}</a> </td>
                                     <td>{{ booking.startdate|date:'Y-m-d H:i' }}</td>
                                     <td>{{ booking.enddate|date:'Y-m-d H:i' }}</td>
-                                    <td>{{booking.confirmed|date:'Y-m-d H:i'|default:"Not confirmed"}}</td>
+                                    <td>{{ booking.confirmed|date:'Y-m-d H:i'|default:"Not confirmed"}}</td>
                                 </tr>
                                 {% empty %}
                                 <tr>

@@ -1,6 +1,8 @@
 from .widgets import  DateTimePickerInput
 from django import forms
-from .models import Booking
+from .models import Booking, Profile
+from django.contrib.auth.models import User
+
 
 class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -44,3 +46,28 @@ class BookingForm(forms.ModelForm):
             'enddate' : DateTimePickerInput(),
             'confirmed' : DateTimePickerInput(),
         }
+
+
+class UpdateUserForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+            visible.field.widget.attrs['placeholder'] = visible.field.label
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'username', 'email']
+
+
+class UpdateProfileForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+            visible.field.widget.attrs['placeholder'] = visible.field.label
+            visible.field.widget.attrs['rows'] = 1
+
+    class Meta:
+        model = Profile
+        fields = ['phone', 'company', 'address', 'postalcode', 'city', 'country']
