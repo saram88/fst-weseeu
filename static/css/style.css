@@ -173,6 +173,11 @@ mark
     margin-top: 92px;
 }
 
+.form-info .alert {
+    position: relative;
+    margin-top: 0px;
+}
+
 /* Footer */
 .footer-container
 {

@@ -23,7 +23,7 @@ class Profile(models.Model):
 
     @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
-        instance.profile.save() 
+        instance.profile.save()
 
 
 class Service(models.Model):
@@ -68,4 +68,4 @@ class Booking(models.Model):
             return False
 
     def set_booking_confirm(booking_id, confirm_date):
-        Booking.objects.filter(id=booking_id).update(confirmed=confirm_date) 
+        Booking.objects.filter(id=booking_id).update(confirmed=confirm_date)

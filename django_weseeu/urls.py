@@ -18,7 +18,7 @@ from django.urls import path, include
 from weseeu import views
 
 urlpatterns = [
-     # Open pages
+     # Public pages
     path('', views.main_view, name='main'),
     path('about/', views.about_view, name='about'),
     path('contact/', views.contact_view, name='contact'),
@@ -39,4 +39,3 @@ urlpatterns = [
 
 handler404 = 'weseeu.views.error_404'
 handler500 = 'weseeu.views.error_500'
-

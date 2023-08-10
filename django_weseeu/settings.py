@@ -101,16 +101,9 @@ WSGI_APPLICATION = 'django_weseeu.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#if development:
-#    DATABASES = {
-#        'default': {
-#            'ENGINE': 'django.db.backends.sqlite3',
-#            'NAME': BASE_DIR / 'db.sqlite3',
-#        }
-#    }
-#else:
+
 DATABASES = {
-    'default': dj_database_url.parse('postgres://dnvvxwcd:A23KRuY79FVSDHBsm63d8mE_pPNPir53@snuffleupagus.db.elephantsql.com/dnvvxwcd') #os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse('postgres://dnvvxwcd:A23KRuY79FVSDHBsm63d8mE_pPNPir53@snuffleupagus.db.elephantsql.com/dnvvxwcd')
 }
 
 

@@ -15,7 +15,7 @@
                     <form method="POST" action="/booking/add/">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <div>
+                        <div class="form-info">
                             {% if error|length > 0 %}
                             <div class="alert alert-danger">
                                 {{ error }}
