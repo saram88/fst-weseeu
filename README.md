@@ -46,7 +46,6 @@ As the developer, I can design an aesthetically pleasing webpage so that users c
 - As a user, I can click the logo of the website so that I can easily get back to the homepage.
 
 ### | User Account
-![Home](/documentation/readme_images/signinout.png)
 As the developer, I can create a register / login feature so users and create an account and login / logout.
 #### User Stories
 - As a user I can sign up, log in and log out so that I can see the features available to registered users.
@@ -82,7 +81,7 @@ The color scheme is chosen based on what statistically you say colors are associ
 
 All combinations of the colors used illustrate a contrast between background and text to ensure maximum user accessibility.
 
-![Color Palette](/documentation/readme_images/color_palette.png)
+![Color Palette](/documentation/readme_images/color%20palette.png)
 
 #### Image
 One background picture that floats when you move the webbpage up and down. The other images follow the theme to match UX and so my costumer get a good experience.
@@ -148,13 +147,16 @@ An Entity Relationship Diagram was created using [DB Designer](https://erd.dbdes
 **About**
 - The 'About' section gives a brief overview of who we are so they can get saftey inscoure that we are a good company.
 
+![Successful Log Out](/documentation/readme_images/aboutus.png)
 
-- Django allauth was installed and used to create the Sign up, Log In and Log Out functionality and pages. 
 
-![Successful Log In](/documentation/readme_images/login.png)
-![Successful Log Out](/documentation/readme_images/logout.png)
+**Log in or log out messeage** 
 
 - Success messages inform the user if they have logged in and logged out successfully and are present on the site for 3 seconds before automatically disappearing.
+- Django allauth was installed and used to create the Sign up, Log In and Log Out functionality and pages. 
+
+![Successful Log Out](/documentation/readme_images/logout.png)
+
 
 ### Menu Page
 
@@ -168,8 +170,7 @@ An Entity Relationship Diagram was created using [DB Designer](https://erd.dbdes
 
 - The overall look of the page is the same. If a user is logged in as an Admin super user, they can add, edit and delete menu items.
 
-![Menu Page - Admin users](/documentation/readme_images/admin_user.png)
-
+![Menu Page - Admin users](/documentation/readme_images/adminnavbar.png)
 
 
 ### Contact Us Page
@@ -235,13 +236,13 @@ I have some improvements but have chosen not to include them in this version as 
 The following steps were taken to deploy the live website to Heroku from the GitHub repository:
 
 ### Create a Heroku App:
-- Log into your [Heroku](https://dashboard.heroku.com/apps) account or create an account.
+- Log into your heroku account or create an account.
 - On the main page click the 'New' button at the top right corner and select 'Create New App' from the dropdown menu. 
-![Heroku Create App](/documentation/readme_images/heroku-create-new.png)
+![Heroku Create App](/documentation/readme_images/createnewapp.png)
 - Enter in a unique app name
 - Select your region
 - Click 'Create App'
-![Heroku New App](/documentation/readme_images/heroku-create-app.png)
+
 
 ### Attach the Postgres database:
 - In the Resources tab, under add-ons, type in Postgres and select the Heroku Postgres option.
@@ -319,7 +320,7 @@ I have also use google translate to make my english to work well.
 - [PostgreSQL](https://www.postgresql.org/) Used as the database for this project.
 - [Heroku](https://dashboard.heroku.com/login) - Used as the cloud-based platform to deploy the site.
 - [DB Designer](https://erd.dbdesigner.net/) - Used to visualize data models.
-- [Favicon](https://favicon.io/) - Used to create the wine glass icon for the browser tab.
+- [Favicon](https://favicon.io/) - Used to create the icon for the browser tab.
 - [GitHub](https://github.com/) - Used for version control and agile methodology.
 - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
 - [PEP8 Online](https://pep8ci.herokuapp.com/#) - Used to validate all Python code pages in the project.
