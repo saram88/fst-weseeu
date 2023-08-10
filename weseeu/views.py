@@ -54,6 +54,11 @@ def bookings_view(request):
 
 @login_required
 def add_booking(request):
+    error_str1 = 'Start date can not be the same or before current time'
+    error_str2 = 'Start date can not be the same or later then end date'
+    error_str3 = 'Selected booking date is not available for that service. '
+    error_str3 = error_str3 + 'Please select another date.'
+
     if request.method == 'POST':
         try:
             form = BookingForm(request.POST)
@@ -72,7 +77,7 @@ def add_booking(request):
                     field.widget = field.hidden_widget()
                     context = {
                         'form': form,
-                        'error': 'Start date can not be the same or before current time.'
+                        'error': error_str1
                     }
                     return render(request, 'add_booking.html', context)
 
@@ -82,17 +87,19 @@ def add_booking(request):
                     field.widget = field.hidden_widget()
                     context = {
                         'form': form,
-                        'error': 'Start date can not be the same or later then end date.'
+                        'error': error_str2
                     }
                     return render(request, 'add_booking.html', context)
 
-                if (Booking.get_booking_within_dates(request.POST.get('service'), startdate_object, enddate_object)):
+                service_req = request.POST.get('service')
+                if (Booking.get_booking_within_dates(
+                        service_req, startdate_object, enddate_object)):
                     # Hide confirmed when add booking
                     field = form.fields['confirmed']
                     field.widget = field.hidden_widget()
                     context = {
                         'form': form,
-                        'error': 'Selected booking date is not available for that service. Please select another date or contact us for assistance.'
+                        'error': error_str3
                     }
                     return render(request, 'add_booking.html', context)
 
@@ -134,13 +141,20 @@ def add_booking(request):
 
 @login_required
 def edit_booking(request, booking_id):
+    error_str1 = 'Start date can not be the same or before current time'
+    error_str2 = 'Start date can not be the same or later then end date'
+    error_str3 = 'Selected booking date is not available for that service. '
+    error_str3 = error_str3 + 'Please select another date.'
+
     item = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=item)
         if form.is_valid():
 
-            startdate_object = datetime.strptime(request.POST.get('startdate'), '%Y-%m-%d %H:%M')
-            enddate_object = datetime.strptime(request.POST.get('enddate'), '%Y-%m-%d %H:%M')
+            startdate_object = datetime.strptime(
+                request.POST.get('startdate'), '%Y-%m-%d %H:%M')
+            enddate_object = datetime.strptime(
+                request.POST.get('enddate'), '%Y-%m-%d %H:%M')
 
             now = datetime.now()
             if (startdate_object <= now):
@@ -149,7 +163,7 @@ def edit_booking(request, booking_id):
                 field.widget = field.hidden_widget()
                 context = {
                     'form': form,
-                    'error': 'Start date can not be the same or before current time.'
+                    'error': error_str1
                 }
                 return render(request, 'add_booking.html', context)
 
@@ -160,18 +174,21 @@ def edit_booking(request, booking_id):
                     field.widget = field.hidden_widget()
                 context = {
                     'form': form,
-                    'error': 'Start date can not be the same or later then end date.'
+                    'error': error_str2
                 }
                 return render(request, 'add_booking.html', context)
 
-            if (Booking.get_booking_within_dates(request.POST.get('service'), startdate_object, enddate_object)):
+            service_req = request.POST.get('service')
+            if (Booking.get_booking_within_dates(
+                    service_req, startdate_object, enddate_object)):
                 # Hide confirmed when edit booking and user is not 'staff'
                 if (not request.user.is_staff):
                     field = form.fields['confirmed']
                     field.widget = field.hidden_widget()
+
                 context = {
                     'form': form,
-                    'error': 'Selected booking date is not available for that service. Please select another date or contact us for assistance.'
+                    'error': error_str3
                 }
                 return render(request, 'edit_booking.html', context)
 
@@ -201,11 +218,11 @@ def edit_booking(request, booking_id):
 def confirm_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     form = BookingForm(request.POST, instance=booking)
-    # form = BookingForm(request.POST, instance=booking, initial={'confirmed': datetime.now().strftime('%Y-%m-%d %H:%M')})
     if request.method == "POST":
 
         try:
-            Booking.set_booking_confirm(booking_id, datetime.now().strftime('%Y-%m-%d %H:%M'))
+            Booking.set_booking_confirm(
+                booking_id, datetime.now().strftime('%Y-%m-%d %H:%M'))
             messages.success(request, "Booking has been confirmed")
             return redirect('booking')
         except Exception as e:
@@ -243,11 +260,14 @@ def edit_profile(request):
 
         if request.method == "POST":
             user_form = UpdateUserForm(request.POST, instance=request.user)
-            profile_form = UpdateProfileForm(request.POST, request.FILES, instance=request.user.profile)
+            profile_form = UpdateProfileForm(
+                request.POST, request.FILES, instance=request.user.profile)
             if user_form.is_valid() and profile_form.is_valid():
                 user_form.save()
                 profile_form.save()
-                messages.success(request, 'Your profile is updated successfully')
+
+                messages.success(
+                    request, 'Your profile is updated successfully')
                 return redirect(to='booking')
 
         else:

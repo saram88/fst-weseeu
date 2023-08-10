@@ -40,8 +40,12 @@ class Service(models.Model):
 
 
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_booking")
-    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name="user_service")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="user_booking")
+
+    service = models.ForeignKey(
+        Service, on_delete=models.CASCADE, related_name="user_service")
+
     create_on = models.DateTimeField(auto_now_add=True)
     startdate = models.DateTimeField(blank=False)
     enddate = models.DateTimeField(blank=False)
@@ -60,7 +64,10 @@ class Booking(models.Model):
         return self.service.name
 
     def get_booking_within_dates(serv, start, end):
-        result = Booking.objects.filter(service=serv, startdate__date__range=(start, end), enddate__date__range=(start, end))
+        result = Booking.objects.filter(
+            service=serv,
+            startdate__date__range=(start, end),
+            enddate__date__range=(start, end))
 
         if (result.count() > 0):
             return True

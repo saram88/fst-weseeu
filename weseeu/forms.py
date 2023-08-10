@@ -32,7 +32,13 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ['service', 'startdate', 'enddate', 'confirmed', 'description']
+        fields = [
+            'service',
+            'startdate',
+            'enddate',
+            'confirmed',
+            'description'
+        ]
 
         labels = {
             "startdate": "Start date",
@@ -57,7 +63,12 @@ class UpdateUserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'email']
+        fields = [
+            'first_name',
+            'last_name',
+            'username',
+            'email'
+        ]
 
 
 class UpdateProfileForm(forms.ModelForm):
@@ -84,4 +95,11 @@ class UpdateProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['phone', 'company', 'address', 'postalcode', 'city', 'country']
+        fields = [
+            'phone',
+            'company',
+            'address',
+            'postalcode',
+            'city',
+            'country'
+        ]
