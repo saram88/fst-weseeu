@@ -323,8 +323,17 @@ Other credits
 
 # validator.w3.org
 
-The test get out errors when i 
+- The test get out errors when i valideate it in HTML validator due to Django and Python code.
 
+# Pep8- Python
+
+- No errors
+
+# jshint.com
+
+![Jshint](/documentation/readme_images/Jshint.png)
+
+I can not understand what to do and therefore i choose to let you look at this
 
 ## Frameworks - Libraries - Programs Used 
 - [Font Awesome](https://fontawesome.com/): The icons in the footer
