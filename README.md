@@ -60,7 +60,6 @@ As a site admin, I can manage all bookings and create, read, update and delete s
 As the developer, I can concisely document my testing and deployment methods so assessors and other developers can understand the website from a technical standpoint.
 #### User Stories
 - As the developer, I can create a README.md file so that other developers and the assessors can have an in-depth look at the website's structure and programming.
-- As the developer, I can create a TESTING.md file so that the assessors can see the bugs and their solutions identified and the validation passed.
 - As the developer, I can concisely describe the Heroku deployment process so that others know how to deploy an app on Heroku.
 
 ### | Error Pages
@@ -319,6 +318,13 @@ Other credits
 
 - The photos used on the home and sign up page are from This Open Source site
 - The images used for the gallery page were taken from this other open source site
+
+## Testing
+
+# validator.w3.org
+
+The test get out errors when i 
+
 
 ## Frameworks - Libraries - Programs Used 
 - [Font Awesome](https://fontawesome.com/): The icons in the footer
